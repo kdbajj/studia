@@ -22,7 +22,6 @@ namespace KarolinaDbaj_Kosmetyki
         bool wegańskie;
         static int liczbaKosmetykow = 0;
 
-
         public ArtykulyPielegnacyjne()
         {
             liczbaKosmetykow += 1;
@@ -99,7 +98,6 @@ namespace KarolinaDbaj_Kosmetyki
                 cenaPoRabacie = cena - rabat;
                 lblRabat.Text = "Produkt nie jest nowy, \n więc rabat wynosi 10%, \n cena po zniżce to: " + kosmetyk.zaokraglij_2(cenaPoRabacie) + " zł!";
             }
-
             else
                 rabat = ((10 * cena) / 100);
             cenaPoRabacie = cena - rabat;

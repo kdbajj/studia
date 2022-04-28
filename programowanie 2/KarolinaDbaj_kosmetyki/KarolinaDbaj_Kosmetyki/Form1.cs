@@ -70,7 +70,7 @@ namespace KarolinaDbaj_Kosmetyki
             dateTimePicker1.ShowCheckBox = true;
             dateTimePicker1.ShowUpDown = true;
         }
-        
+
         public void WyświetlObraz()
         {
 
