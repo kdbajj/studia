@@ -20,9 +20,10 @@ namespace KarolinaDbaj_Kosmetyki
             textBoxZniżka.Hide();
 
         }
+        public static DateTime Now { get; }
 
         //public ListBox ListBoxKosmetyk { get; private set; }
-      
+
         private void button1_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox1 = new PictureBox();
@@ -62,14 +63,19 @@ namespace KarolinaDbaj_Kosmetyki
             ArtykulyPielegnacyjneFormatka pielęgnacja = new ArtykulyPielegnacyjneFormatka();
             pielęgnacja.Show();
         }
+       
         public void MyDateTimePicker()
         {
             
-            DateTimePicker dateTimePicker1 = new DateTimePicker();
-            dateTimePicker1.MaxDate = DateTime.Today;
-            dateTimePicker1.ShowCheckBox = true;
-            dateTimePicker1.ShowUpDown = true;
-        }
+           DateTimePicker dateTimePicker1 = new DateTimePicker();
+            var datepicker1 = DateTime.Now;
+           // dateTimePicker1.MaxDate = DateTime.Now;
+         //  dateTimePicker1.ShowCheckBox = true;
+          // dateTimePicker1.ShowUpDown = true;
+            
+        
+      // dateTimePicker1=DateTime.Now;
+    }
 
         public void WyświetlObraz()
         {
@@ -86,18 +92,18 @@ namespace KarolinaDbaj_Kosmetyki
         {
             
             var kosmetyk = new Kosmetyk();//tworzymy nowy obiekt 
-            try
-            {
+            //try
+           // {
                 kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text));
                 lblZniżka.Text = "Cena za taką ilość produktów \n z wliczoną promocją to:" + kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text)) + " zł";
                 textBoxZniżka.Text = String.Empty;//czyścimy pole do wprowadzania danych, aby nie wyskoczył błąd
-                int liczbaProduktów = (Convert.ToInt32(textBoxZniżka.Text));
-            }
-            catch (Exception)
-            {
-                lblZniżka.Text = "Błąd! Nie podałxś żadnej wartości!";
+                //int liczbaProduktów = (Convert.ToInt32(textBoxZniżka.Text));
+            //}
+           // catch (Exception)
+            //{
+          //     lblZniżka.Text = "Błąd! Nie podałxś żadnej wartości!";
                 
-            }
+           // }
         }
        
 

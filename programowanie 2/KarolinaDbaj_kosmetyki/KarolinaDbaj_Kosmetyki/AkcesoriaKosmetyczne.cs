@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +8,11 @@ using System.Windows.Forms;
 
 
 namespace KarolinaDbaj_Kosmetyki
-{   
+{
     //deklarowanie zmiennych w kasie AkcesoriaKosmetyczne
-     internal class AkcesoriaKosmetyczne
+    internal class AkcesoriaKosmetyczne
     {
+
         int numer;
         string nazwaMarki;
         string rodzajKosmetyku;
@@ -22,7 +24,9 @@ namespace KarolinaDbaj_Kosmetyki
         bool przyjazneŚrodowisku;
         string dlaKogo;
         int liczbaKosmetykow = 0;
+        ArrayList odcienieSzczotki = new ArrayList();
        
+
         public AkcesoriaKosmetyczne()
         {
             liczbaKosmetykow += 1;
@@ -36,6 +40,9 @@ namespace KarolinaDbaj_Kosmetyki
             this.materiałWykonania = "Tworzywo sztuczne";
             this.przyjazneŚrodowisku = true;
             this.dlaKogo = "Włosy normalne";
+            this.odcienieSzczotki.Add("czerwony");
+            this.odcienieSzczotki.Add("różowy");
+            this.odcienieSzczotki.Add("fioletowy");
 
         }
         public AkcesoriaKosmetyczne(int numer, string nazwaMarki, string rodzajKosmetyku, int waga, float cena, int kodProduktu, string działanie, bool testowanyDermatologicznie, string materiałWykonania, bool przyjazneŚrodowisku, string dlaKogo)
@@ -51,6 +58,9 @@ namespace KarolinaDbaj_Kosmetyki
             this.materiałWykonania = "Tworzywo sztuczne";
             this.przyjazneŚrodowisku = true;
             this.dlaKogo = "Włosy normalne";
+            this.odcienieSzczotki.Add("czerwony");
+            this.odcienieSzczotki.Add("różowy");
+            this.odcienieSzczotki.Add("fioletowy");
         }
         public AkcesoriaKosmetyczne(AkcesoriaKosmetyczne produkt)
         {
@@ -65,6 +75,9 @@ namespace KarolinaDbaj_Kosmetyki
             this.materiałWykonania = produkt.materiałWykonania;
             this.przyjazneŚrodowisku = produkt.przyjazneŚrodowisku;
             this.dlaKogo = produkt.dlaKogo;
+            this.odcienieSzczotki.Add("czerwony");
+            this.odcienieSzczotki.Add("różowy");
+            this.odcienieSzczotki.Add("fioletowy");
         }
         //dodanie do listy poszczególnych produktów
         public void Wypisz(ListBox lblAkcesoria)
@@ -80,6 +93,9 @@ namespace KarolinaDbaj_Kosmetyki
             lblAkcesoria.Items.Add("Materiał wykonania: " + materiałWykonania);
             lblAkcesoria.Items.Add("Przyjazne środowisku: " + przyjazneŚrodowisku+PrzyjazneŚrodowisku());//dodanie metoda, która wyświetla komunikat, czy produkt jest ekologiczny
             lblAkcesoria.Items.Add("Dla kogo przeznaczony jest produkt: " + dlaKogo);
+             lblAkcesoria.Items.Add("Dostępne kolory produktu:" + odcienieSzczotki[0]);
+           lblAkcesoria.Items.Add("Dostępne kolory produktu:" + odcienieSzczotki[1]);
+            lblAkcesoria.Items.Add("Dostępne kolory produktu:" + odcienieSzczotki[2]);
         }
         //stworzenie metody odpowiadającej za sprawdzenie, czy produkt jest ekologiczny
         private int PrzyjazneŚrodowisku()

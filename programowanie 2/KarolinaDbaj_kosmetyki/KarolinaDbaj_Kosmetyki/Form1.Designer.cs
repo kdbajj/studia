@@ -103,12 +103,12 @@
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 11);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 2, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(401, 30);
             this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 4, 19, 18, 10, 49, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2022, 4, 29, 13, 24, 13, 0);
             // 
             // pictureBox1
             // 

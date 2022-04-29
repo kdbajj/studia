@@ -19,6 +19,8 @@ namespace KarolinaDbaj_Kosmetyki
         string wykończenie;
         int trwałośćWMiesiącach;
         static int liczbaKosmetykow = 0;
+        private int numerProduktu;
+        private string odcień;
 
         public Kosmetyk()
         {
@@ -64,6 +66,20 @@ namespace KarolinaDbaj_Kosmetyki
             
 
         }
+
+        public Kosmetyk(int numer, string nazwaMarki, string rodzajKosmetyku, float cena, int numerProduktu, string odcień, bool testowanyDermatologicznie, string wykończenie, int trwałośćWMiesiącach)
+        {
+            this.numer = numer;
+            this.nazwaMarki = nazwaMarki;
+            this.rodzajKosmetyku = rodzajKosmetyku;
+            this.cena = cena;
+            this.numerProduktu = numerProduktu;
+            this.odcień = odcień;
+            this.testowanyDermatologicznie = testowanyDermatologicznie;
+            this.wykończenie = wykończenie;
+            this.trwałośćWMiesiącach = trwałośćWMiesiącach;
+        }
+
         private int TrwałośćWLatach()
         {
             int lata = trwałośćWMiesiącach / 12;
