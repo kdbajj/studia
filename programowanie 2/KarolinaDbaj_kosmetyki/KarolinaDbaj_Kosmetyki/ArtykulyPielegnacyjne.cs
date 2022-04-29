@@ -43,13 +43,15 @@ namespace KarolinaDbaj_Kosmetyki
             this.wegańskie = o.wegańskie;
             this.działanie = o.działanie;
         }
-        public override void Write(ListBox lb)
+        public new void Wypisz(ListBox lblPielegnacja)
         {
-            base.Write(lb); //wywołanie metody Write Z KLASY BAZOWEJ (Person)
-            lb.Items.Add("Nr indeksu:\t" + indexNo);
-            lb.Items.Add("Kierunek studiów:\t" + fieldOfStudy);
-            lb.Items.Add("");
+            base.Wypisz(lblPielegnacja); //wywołanie metody Write Z KLASY BAZOWEJ (Person)
+            lblPielegnacja.Items.Add("Pojemność: " + pojemność);
+            lblPielegnacja.Items.Add("Dla kogo: " + dlaKogo);
+            lblPielegnacja.Items.Add("Wegański produkt: " + wegańskie);
+            lblPielegnacja.Items.Add("Działanie: " + działanie);
         }
+
 
         /*internal class ArtykulyPielegnacyjne
         {
