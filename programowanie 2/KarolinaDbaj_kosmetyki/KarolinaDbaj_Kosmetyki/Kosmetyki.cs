@@ -13,8 +13,8 @@ namespace KarolinaDbaj_Kosmetyki
         int numer;
         string nazwaMarki;
         string rodzajKosmetyku;
-        float cena;
-        int kodProduktu;
+        public float cena;
+        public int kodProduktu;
         bool testowanyDermatologicznie;
         string wykończenie;
         int trwałośćWMiesiącach;
@@ -111,7 +111,7 @@ namespace KarolinaDbaj_Kosmetyki
 
 
 
-        public void Wypisz(ListBox lb)
+        public virtual void Wypisz (ListBox lb)
         {
             lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
             lb.Items.Add("Nazwa marki:" + nazwaMarki);
@@ -123,7 +123,6 @@ namespace KarolinaDbaj_Kosmetyki
             lb.Items.Add("Testowany dermatologicznie: " + testowanyDermatologicznie + Uczulenie());
             lb.Items.Add("Wykończenie: " + wykończenie);
             lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
-            ;
             lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
 
         }

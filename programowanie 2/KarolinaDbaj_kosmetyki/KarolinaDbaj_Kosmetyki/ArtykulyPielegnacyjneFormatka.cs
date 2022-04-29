@@ -28,7 +28,7 @@ namespace KarolinaDbaj_Kosmetyki
            // ArtykulyPielegnacyjne artykuł3 = new ArtykulyPielegnacyjne ();
             //artykuł3.Wypisz(lblPielegnacja);
             ArtykulyPielegnacyjne artykuly = new ArtykulyPielegnacyjne();
-            
+            artykuly.Wypisz(lblPielegnacja);
             lblRabat.Text = "Teraz możesz uzyskać rabat \n na nasze kosmetyki!";
         }
 
