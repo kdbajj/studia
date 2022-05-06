@@ -19,14 +19,16 @@ namespace KarolinaDbaj_Kosmetyki
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AkcesoriaKosmetyczne produkt1 = new AkcesoriaKosmetyczne();
-           produkt1.Wypisz(lblAkcesoria);
+            //AkcesoriaKosmetyczne produkt1 = new AkcesoriaKosmetyczne();
+            //produkt1.Wypisz(lblAkcesoria);
 
-            AkcesoriaKosmetyczne produkt2 = new AkcesoriaKosmetyczne(2,"Tangle teezer", "Sczotka do włosów", 90, 39.99f, 189, "Dobrze rozczesuje włosy, masuje skórę głowy", true, "Tworzywo sztuczne", true, "Włosy normalne");
-           produkt2.Wypisz(lblAkcesoria);
+            //AkcesoriaKosmetyczne produkt2 = new AkcesoriaKosmetyczne(2,"Tangle teezer", "Sczotka do włosów", 90, 39.99f, 189, "Dobrze rozczesuje włosy, masuje skórę głowy", true, "Tworzywo sztuczne", true, "Włosy normalne");
+            // produkt2.Wypisz(lblAkcesoria);
 
-            AkcesoriaKosmetyczne produkt3 = new AkcesoriaKosmetyczne();
-            produkt3.Wypisz(lblAkcesoria);
+            //AkcesoriaKosmetyczne produkt3 = new AkcesoriaKosmetyczne();
+            //produkt3.Wypisz(lblAkcesoria);
+            AkcesoriaKosmetyczne artykuly = new AkcesoriaKosmetyczne();
+            artykuly.Wypisz(lblAkcesoria);
             lblRabat2.Text = "Teraz możesz uzyskać rabat \n na nasze kosmetyki!";
         }
 

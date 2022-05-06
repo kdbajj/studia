@@ -49,6 +49,7 @@ namespace KarolinaDbaj_Kosmetyki
             lblPielegnacja.Items.Add("Dla kogo: " + dlaKogo);
             lblPielegnacja.Items.Add("Wegański produkt: " + wegańskie);
             lblPielegnacja.Items.Add("Działanie: " + działanie);
+            NowyProdukt();
         }
         public void ObliczanieRabatu(Label lblRabat)
         {

@@ -108,7 +108,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(401, 30);
             this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 4, 29, 13, 24, 13, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2022, 5, 6, 0, 0, 0, 0);
             // 
             // pictureBox1
             // 
