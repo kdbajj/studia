@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="02BC1AD4-1ECE-A636-58E4-8558FA04B0B1" name="ciągnik_model">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-08 20:48:01 UTC</createdTime>
+<ownerDesignName>bazy danych</ownerDesignName>
+<engineerTo>
+<item key="5A4B49C2-4159-7552-9AAD-ECEEDDD1699F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="model" id="85EEB3A4-072E-7AC0-C083-0D7D51DCED02">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-08 20:53:02 UTC</createdTime>
+<ownerDesignName>bazy danych</ownerDesignName>
+<engineerTo>
+<item key="5A4B49C2-4159-7552-9AAD-ECEEDDD1699F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="marka" id="4C99C1D1-83F3-F05C-479A-A4B5CC43201F">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-08 20:53:28 UTC</createdTime>
+<ownerDesignName>bazy danych</ownerDesignName>
+<engineerTo>
+<item key="5A4B49C2-4159-7552-9AAD-ECEEDDD1699F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="bazy danych" id="7B88DE5B-D577-F184-0FF0-99E371DD3CCA" version="3.5">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-08 20:46:10 UTC</createdTime>
+<ownerDesignName>bazy danych</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>7B88DE5B-D577-F184-0FF0-99E371DD3CCA</designId>
+</OSDM_Design>
