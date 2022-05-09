@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11E5E9F9-D7AA-BE8F-9B80-020DE3B864A0" name="Wykładowca">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:02:50 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Indentyfikator" id="1C7D207E-2DDD-A5E5-3EC9-CCBE451CA60D">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:03:25 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Stanowisko" id="5818B868-0B8F-0ECD-2C7F-C445D8142DAE">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:03:43 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="WykImięNazwisko" id="959C2132-27F8-EC33-E443-291C5D860A3D">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:03:51 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="WykGabinet" id="B9198E06-C740-4D53-90CF-9495B92E38CB">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:04:12 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="WykTelefon" id="96C53684-0250-67CF-FB2A-293B634A746C">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:04:23 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="87B94CF3-DE14-EDFC-FFC1-DEEE17C388AC" name="Wykładowca PK">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:03:39 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1C7D207E-2DDD-A5E5-3EC9-CCBE451CA60D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

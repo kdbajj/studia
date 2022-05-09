@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DE197404-B7FF-C3C7-5026-8E067B198AE6" name="Instytut">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 11:55:06 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="INazwa" id="D315F651-8AFD-E56E-1C92-8BE850F53523">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 11:56:09 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ISekretariat" id="9E9E05EF-47E2-D432-94AB-3DCD0577A765">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 11:57:48 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ITelefon" id="35164903-51DE-7C86-300B-630E5ADA046A">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 11:58:08 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Indentyfikator" id="CDD01D01-4406-3BB7-2619-21DBEBC8983D">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:15:50 UTC</createdTime>
+<generatorID>1EC0C826-E983-7929-2FE0-9320F3D05FD5</generatorID>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<referedAttribute>1C7D207E-2DDD-A5E5-3EC9-CCBE451CA60D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DA9C379E-3CE4-553B-CB7D-04D4AEBD1DFF" name="Instytut PK">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 11:58:35 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>
