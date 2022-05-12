@@ -29,10 +29,10 @@ namespace KarolinaDbaj_Kosmetyki
             : base( numer, nazwaMarki,  rodzajKosmetyku, cena, numerProduktu, 
             odcień, testowanyDermatologicznie, wykończenie,trwałośćWMiesiącach)
         {
-            this.pojemność =100;
-            this.dlaKogo="Każdy typ cery";
-            this.wegańskie = true;
-            this.działanie= "Nawilża i oczyszcza skórę twarzy.";
+            this.pojemność = pojemność;
+            this.dlaKogo=dlaKogo;
+            this.wegańskie = wegańskie;
+            this.działanie = działanie;
         }
         public ArtykulyPielegnacyjne(ArtykulyPielegnacyjne o):base(o)
         {
@@ -53,28 +53,31 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public void ObliczanieRabatu(Label lblRabat)
         {
-
-            var kosmetyk = new ArtykulyPielegnacyjne();
             float rabat;
             float cenaPoRabacie;
             if (kodProduktu > 200)
             {
                 rabat = ((20 * cena) / 100);
                 cenaPoRabacie = cena - rabat;
-                lblRabat.Text = "Produkt nie jest nowy, \n więc rabat wynosi 10%, \n cena po zniżce to: " + kosmetyk.zaokraglij_2(cenaPoRabacie) + " zł!";
+                lblRabat.Text = "Produkt nie jest nowy, \n więc rabat wynosi 10%, \n cena po zniżce to: " + zaokraglij_2(cenaPoRabacie) + " zł!";
             }
             else
                 rabat = ((10 * cena) / 100);
             cenaPoRabacie = cena - rabat;
-            lblRabat.Text = "Produkt jest nowy,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + kosmetyk.zaokraglij_2(cenaPoRabacie) + " zł!";
+            lblRabat.Text = "Produkt jest nowy,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
         }
         public float zaokraglij_2(float cenaPoRabacie)
         {
-            var kosmetyk = new ArtykulyPielegnacyjne();
+           
             float wynik = cenaPoRabacie * 100;
             int a = (int)wynik;
             wynik = (float)a / 100;
             return wynik;
+        }
+        public static bool TakNie(string s)
+        {
+            if (s == "tak") return true;
+            else return false;
         }
 
     }

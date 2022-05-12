@@ -15,13 +15,14 @@ namespace KarolinaDbaj_Kosmetyki
         public ArtykulyPielegnacyjneFormatka()
         {
             InitializeComponent();
+            lblRabat.Text = "Promocja! Jeśli kupisz produkt o pojemności 50 g \n otrzymasz rabat!";
         }
         
         private void button1_Click(object sender, EventArgs e)
         {
             ArtykulyPielegnacyjne artykuly = new ArtykulyPielegnacyjne();
             artykuly.Wypisz(lblPielegnacja);
-            lblRabat.Text = "Teraz możesz uzyskać rabat \n na nasze kosmetyki!";
+           
         }
 
         private void ArtykulyPielegnacyjneFormatka_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,11 +30,21 @@ namespace KarolinaDbaj_Kosmetyki
             Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnUżytkownikPielegnacja_Click(object sender, EventArgs e)
         {
+            var kosmetyk = new ArtykulyPielegnacyjne(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, Convert.ToInt32(comboBox2.SelectedItem), GetInputValidator.ConvertToFloat(textBox3.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), textBox9.Text, Convert.ToInt32(textBox10.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox11.Text, textBox12.Text);
+            kosmetyk.Wypisz(lblPielegnacja);
+            lblPielegnacja.Items.Add("");
+
+        }
+
+
+        private void btnkPielegnacja_Click(object sender, EventArgs e)
+        {
+
             var kosmetyk = new ArtykulyPielegnacyjne();
             kosmetyk.ObliczanieRabatu(lblRabat);
+
         }
-       
     }
 }

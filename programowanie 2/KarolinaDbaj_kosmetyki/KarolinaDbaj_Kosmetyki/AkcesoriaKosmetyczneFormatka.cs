@@ -42,6 +42,6 @@ namespace KarolinaDbaj_Kosmetyki
            
             var kosmetyk = new ArtykulyPielegnacyjne();
             kosmetyk.ObliczanieRabatu(lblRabat2);
-        }
+        }   
     }
 }

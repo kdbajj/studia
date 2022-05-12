@@ -39,7 +39,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(12, 342);
+            this.button1.Location = new System.Drawing.Point(23, 480);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 82);
             this.button1.TabIndex = 4;
@@ -51,7 +51,7 @@
             // 
             this.lblAkcesoria.FormattingEnabled = true;
             this.lblAkcesoria.ItemHeight = 16;
-            this.lblAkcesoria.Location = new System.Drawing.Point(12, 12);
+            this.lblAkcesoria.Location = new System.Drawing.Point(23, 150);
             this.lblAkcesoria.Name = "lblAkcesoria";
             this.lblAkcesoria.ScrollAlwaysVisible = true;
             this.lblAkcesoria.Size = new System.Drawing.Size(296, 324);
@@ -61,9 +61,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(337, 342);
+            this.button2.Location = new System.Drawing.Point(337, 515);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(368, 82);
+            this.button2.Size = new System.Drawing.Size(135, 47);
             this.button2.TabIndex = 6;
             this.button2.Text = "Oblicz rabat!";
             this.button2.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(968, 586);
             this.Controls.Add(this.lblRabat2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblAkcesoria);

@@ -26,21 +26,15 @@ namespace KarolinaDbaj_Kosmetyki
             this.odcienieSzczotki.Add("czerwony");
             this.odcienieSzczotki.Add("różowy");
             this.odcienieSzczotki.Add("fioletowy");
-
         }
-
-        public AkcesoriaKosmetyczne(int numer, string nazwaMarki, string rodzajKosmetyku,
-            int pojemność, float cena, int numerProduktu, string odcień,
-            bool testowanyDermatologicznie, string wykończenie, int trwałośćWMiesiącach,
-            bool wegańskie, int waga, string materiałWykonania,
-            bool przyjazneŚrodowisku, string doCzegoSłuży)
-            : base(numer, nazwaMarki, rodzajKosmetyku, cena, numerProduktu,
-            odcień, testowanyDermatologicznie, wykończenie, trwałośćWMiesiącach)
+        public AkcesoriaKosmetyczne( int numerProduktu,
+            bool testowanyDermatologicznie, int waga, string materiałWykonania,
+            bool przyjazneŚrodowisku, string doCzegoSłuży): base(numerProduktu, testowanyDermatologicznie)
         {
-            this.waga = 100;
-            this.materiałWykonania = "plastik";
-            this.przyjazneŚrodowisku = true;
-            this.doCzegoSłuży = "rozczesywanie włosów";
+            this.waga =waga;
+            this.materiałWykonania = materiałWykonania;
+            this.przyjazneŚrodowisku = przyjazneŚrodowisku;
+            this.doCzegoSłuży = doCzegoSłuży;
             this.odcienieSzczotki.Add("czerwony");
             this.odcienieSzczotki.Add("różowy");
             this.odcienieSzczotki.Add("fioletowy");

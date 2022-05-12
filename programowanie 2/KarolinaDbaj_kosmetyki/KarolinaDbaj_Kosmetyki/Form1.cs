@@ -16,33 +16,28 @@ namespace KarolinaDbaj_Kosmetyki
         public Form1()
         {
             InitializeComponent();
-            btnZniżka.Hide();
-            textBoxZniżka.Hide();
-
+            //btnZniżka.Hide();
+            // textBoxZniżka.Hide();
+            lblZniżka.Text = "Promocja! \n Kup jeden dostań 2 gratis!\n Działa nawet przy zakupie kilku sztuk!\n Wpisz ile produktów chcesz kupić \n i oblicz ile wynosi całkowity koszt:";
         }
-        public static DateTime Now { get; }
 
-        //public ListBox ListBoxKosmetyk { get; private set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PictureBox pictureBox1 = new PictureBox();
-            pictureBox1.Width = 80;
-            pictureBox1.Height = 90; 
-
             WyświetlObraz();
 
-            Kosmetyk o1 = new Kosmetyk();
-            o1.Wypisz(listBoxKosmetyk);
+            
+            //btnZniżka.Show();
+            //textBoxZniżka.Show();
 
-            Kosmetyk o2 = new Kosmetyk(2, "Maybelline", "Cienie do oczu", 15, 50.55f, 435, "kolorowy", true, "połyskujące", 15, true);
-            o2.Wypisz(listBoxKosmetyk);
+            var kosmetyk1 = new Kosmetyk();
+            kosmetyk1.Wypisz(listBoxKosmetyk);
+            listBoxKosmetyk.Items.Add("");
 
-            Kosmetyk o3 = new Kosmetyk();
-            o3.Wypisz(listBoxKosmetyk);
-            lblZniżka.Text = "Promocja! \n Kup jeden dostań 2 gratis!\n Działa nawet przy zakupie kilku sztuk!\n Wpisz ile produktów chcesz kupić \n i oblicz ile wynosi całkowity koszt:";
-            btnZniżka.Show();
-            textBoxZniżka.Show();
+            var kosmetyk2 = new Kosmetyk("pomadka", "maybelline", 22.6F, 4567, Convert.ToBoolean("true"), 12, "matowe", DateTime.Now);
+            kosmetyk2.Wypisz(listBoxKosmetyk);
+            listBoxKosmetyk.Items.Add("");
+
         }
 
         private void btnAkcesoria_Click(object sender, EventArgs e)
@@ -63,19 +58,19 @@ namespace KarolinaDbaj_Kosmetyki
             ArtykulyPielegnacyjneFormatka pielęgnacja = new ArtykulyPielegnacyjneFormatka();
             pielęgnacja.Show();
         }
-       
+
         public void MyDateTimePicker()
         {
-            
-           DateTimePicker dateTimePicker1 = new DateTimePicker();
+
+            // DateTimePicker dateTimePicker1 = new DateTimePicker();
             var datepicker1 = DateTime.Now;
-           // dateTimePicker1.MaxDate = DateTime.Now;
-         //  dateTimePicker1.ShowCheckBox = true;
-          // dateTimePicker1.ShowUpDown = true;
-            
-        
-      // dateTimePicker1=DateTime.Now;
-    }
+            // dateTimePicker1.MaxDate = DateTime.Now;
+            //  dateTimePicker1.ShowCheckBox = true;
+            // dateTimePicker1.ShowUpDown = true;
+
+
+            // dateTimePicker1=DateTime.Now;
+        }
 
         public void WyświetlObraz()
         {
@@ -90,26 +85,39 @@ namespace KarolinaDbaj_Kosmetyki
 
         private void btnZniżka_Click(object sender, EventArgs e)
         {
-            
-            var kosmetyk = new Kosmetyk();//tworzymy nowy obiekt 
-            //try
-           // {
-                kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text));
-                lblZniżka.Text = "Cena za taką ilość produktów \n z wliczoną promocją to:" + kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text)) + " zł";
-                textBoxZniżka.Text = String.Empty;//czyścimy pole do wprowadzania danych, aby nie wyskoczył błąd
-                //int liczbaProduktów = (Convert.ToInt32(textBoxZniżka.Text));
-            //}
-           // catch (Exception)
-            //{
-          //     lblZniżka.Text = "Błąd! Nie podałxś żadnej wartości!";
-                
-           // }
-        }
-       
 
-    private void textBoxZniżka_TextChanged(object sender, EventArgs e)
+            var kosmetyk = new Kosmetyk();//tworzymy nowy obiekt 
+                                          //try
+                                          // {
+            kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text));
+            lblZniżka.Text = "Cena za taką ilość produktów \n z wliczoną promocją to:" + kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text)) + " zł";
+            textBoxZniżka.Text = String.Empty;//czyścimy pole do wprowadzania danych, aby nie wyskoczył błąd
+               //int liczbaProduktów = (Convert.ToInt32(textBoxZniżka.Text));
+                 //}
+                    // catch (Exception)
+                  //{
+                   //     lblZniżka.Text = "Błąd! Nie podałxś żadnej wartości!";
+
+            // }
+        }
+
+
+        private void textBoxZniżka_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Kosmetyk kosmetyk = new Kosmetyk(textBox1.Text, textBox6.Text, GetInputValidator.ConvertToFloat(textBox2.Text), Convert.ToInt32(textBox3.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), Convert.ToInt32(textBox5.Text), textBox4.Text, GetInputValidator.GetOnlyDDMMYYY(dataZakupu));
+            kosmetyk.Wypisz(listBoxKosmetyk);
+            listBoxKosmetyk.Items.Add("");
+        }
+
+        public void button3_Click(object sender, EventArgs e)
+        {
+            var kosmetyk = new Kosmetyk();
+            kosmetyk.ZaładujZdjęcie(pictureBox1);
         }
     }
 }
