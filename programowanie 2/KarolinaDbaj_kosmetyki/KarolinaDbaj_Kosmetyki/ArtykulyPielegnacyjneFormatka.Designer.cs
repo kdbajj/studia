@@ -87,21 +87,22 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(623, 494);
+            this.button2.Location = new System.Drawing.Point(651, 523);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 49);
             this.button2.TabIndex = 2;
             this.button2.Text = "Oblicz rabat!";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblRabat
             // 
             this.lblRabat.AutoSize = true;
             this.lblRabat.BackColor = System.Drawing.Color.Transparent;
-            this.lblRabat.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblRabat.Location = new System.Drawing.Point(22, 472);
+            this.lblRabat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblRabat.Location = new System.Drawing.Point(-4, 441);
             this.lblRabat.Name = "lblRabat";
-            this.lblRabat.Size = new System.Drawing.Size(23, 36);
+            this.lblRabat.Size = new System.Drawing.Size(22, 32);
             this.lblRabat.TabIndex = 3;
             this.lblRabat.Text = ".";
             // 

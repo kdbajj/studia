@@ -32,8 +32,8 @@ namespace KarolinaDbaj_Kosmetyki
 
         private void BtnUżytkownikPielegnacja_Click(object sender, EventArgs e)
         {
-            var kosmetyk = new ArtykulyPielegnacyjne(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, Convert.ToInt32(comboBox2.SelectedItem), GetInputValidator.ConvertToFloat(textBox3.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), textBox9.Text, Convert.ToInt32(textBox10.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox11.Text, textBox12.Text);
-            kosmetyk.Wypisz(lblPielegnacja);
+            var artykulyPielegnacyjne = new ArtykulyPielegnacyjne(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, Convert.ToInt32(comboBox2.SelectedItem), GetInputValidator.ConvertToFloat(textBox3.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), textBox9.Text, Convert.ToInt32(textBox10.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox11.Text, textBox12.Text);
+            artykulyPielegnacyjne.Wypisz(lblPielegnacja);
             lblPielegnacja.Items.Add("");
 
         }
@@ -42,9 +42,16 @@ namespace KarolinaDbaj_Kosmetyki
         private void btnkPielegnacja_Click(object sender, EventArgs e)
         {
 
-            var kosmetyk = new ArtykulyPielegnacyjne();
-            kosmetyk.ObliczanieRabatu(lblRabat);
+            var artykul = new ArtykulyPielegnacyjne();
+            artykul.ObliczanieRabatu(lblRabat);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var artykuł = new ArtykulyPielegnacyjne();
+            artykuł.ObliczanieRabatu(lblRabat);
+           
         }
     }
 }

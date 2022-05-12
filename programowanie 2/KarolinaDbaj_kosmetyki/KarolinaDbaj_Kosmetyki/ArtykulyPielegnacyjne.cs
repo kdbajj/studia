@@ -36,7 +36,6 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public ArtykulyPielegnacyjne(ArtykulyPielegnacyjne o):base(o)
         {
-
             this.pojemność = o.pojemność;
             this.dlaKogo = o.dlaKogo;
             this.wegańskie = o.wegańskie;
@@ -45,7 +44,7 @@ namespace KarolinaDbaj_Kosmetyki
         public override void Wypisz(ListBox lblPielegnacja)
         {
             base.Wypisz(lblPielegnacja); //wywołanie metody Write Z KLASY BAZOWEJ (Person)
-            lblPielegnacja.Items.Add("Pojemność: " + pojemność);
+            lblPielegnacja.Items.Add("Pojemność: " + pojemność+"g");
             lblPielegnacja.Items.Add("Dla kogo: " + dlaKogo);
             lblPielegnacja.Items.Add("Wegański produkt: " + wegańskie);
             lblPielegnacja.Items.Add("Działanie: " + działanie);
@@ -55,16 +54,17 @@ namespace KarolinaDbaj_Kosmetyki
         {
             float rabat;
             float cenaPoRabacie;
-            if (kodProduktu > 200)
+           
+            if (pojemność!=50)
             {
                 rabat = ((20 * cena) / 100);
                 cenaPoRabacie = cena - rabat;
-                lblRabat.Text = "Produkt nie jest nowy, \n więc rabat wynosi 10%, \n cena po zniżce to: " + zaokraglij_2(cenaPoRabacie) + " zł!";
+                lblRabat.Text = "Produkt nie jest w pojemności 50g, \n więc rabat wynosi 10%, \n cena po zniżce to: " + zaokraglij_2(cenaPoRabacie) + " zł!";
             }
             else
                 rabat = ((10 * cena) / 100);
             cenaPoRabacie = cena - rabat;
-            lblRabat.Text = "Produkt jest nowy,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
+            lblRabat.Text = "Produkt jest w pojemności 50 g,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
         }
         public float zaokraglij_2(float cenaPoRabacie)
         {
@@ -74,12 +74,6 @@ namespace KarolinaDbaj_Kosmetyki
             wynik = (float)a / 100;
             return wynik;
         }
-        public static bool TakNie(string s)
-        {
-            if (s == "tak") return true;
-            else return false;
-        }
-
     }
 }
 
