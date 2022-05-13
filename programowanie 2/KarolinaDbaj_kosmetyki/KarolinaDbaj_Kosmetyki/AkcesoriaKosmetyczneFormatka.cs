@@ -19,17 +19,9 @@ namespace KarolinaDbaj_Kosmetyki
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //AkcesoriaKosmetyczne produkt1 = new AkcesoriaKosmetyczne();
-            //produkt1.Wypisz(lblAkcesoria);
-
-            //AkcesoriaKosmetyczne produkt2 = new AkcesoriaKosmetyczne(2,"Tangle teezer", "Sczotka do włosów", 90, 39.99f, 189, "Dobrze rozczesuje włosy, masuje skórę głowy", true, "Tworzywo sztuczne", true, "Włosy normalne");
-            // produkt2.Wypisz(lblAkcesoria);
-
-            //AkcesoriaKosmetyczne produkt3 = new AkcesoriaKosmetyczne();
-            //produkt3.Wypisz(lblAkcesoria);
             AkcesoriaKosmetyczne artykuly = new AkcesoriaKosmetyczne();
             artykuly.Wypisz(lblAkcesoria);
-            lblRabat2.Text = "Teraz możesz uzyskać rabat \n na nasze kosmetyki!";
+           
         }
 
         private void AkcesoriaKosmetyczneFormatka_FormClosed(object sender, FormClosedEventArgs e)
@@ -40,8 +32,21 @@ namespace KarolinaDbaj_Kosmetyki
         private void button2_Click(object sender, EventArgs e)
         {
            
-            var kosmetyk = new ArtykulyPielegnacyjne();
-            kosmetyk.ObliczanieRabatu(lblRabat2);
-        }   
+          
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //string[] odcienieSzczotki = comboBox3.Items.Cast<Object>().Select(item => item.ToString()).ToArray();
+
+            var artykul1 = new AkcesoriaKosmetyczne(Convert.ToInt32(textBox1.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()),Convert.ToInt32(textBox3.Text),textBox4.Text, Kosmetyk.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()),textBox6.Text);
+           artykul1.Wypisz(lblAkcesoria);
+            lblAkcesoria.Items.Add("");
+          
+         
+        }
     }
 }
+            /*int numerProduktu, bool testowanyDermatologicznie, int waga, string materiałWykonania,
+            bool przyjazneŚrodowisku, string doCzegoSłuży*/

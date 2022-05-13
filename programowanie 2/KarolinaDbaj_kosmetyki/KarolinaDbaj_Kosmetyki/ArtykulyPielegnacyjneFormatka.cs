@@ -53,5 +53,6 @@ namespace KarolinaDbaj_Kosmetyki
             artykuł.ObliczanieRabatu(lblRabat);
            
         }
+        
     }
 }

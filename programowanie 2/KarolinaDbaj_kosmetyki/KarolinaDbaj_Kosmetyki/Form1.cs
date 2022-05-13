@@ -92,13 +92,7 @@ namespace KarolinaDbaj_Kosmetyki
             kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text));
             lblZniżka.Text = "Cena za taką ilość produktów \n z wliczoną promocją to:" + kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text)) + " zł";
             textBoxZniżka.Text = String.Empty;//czyścimy pole do wprowadzania danych, aby nie wyskoczył błąd
-               //int liczbaProduktów = (Convert.ToInt32(textBoxZniżka.Text));
-                 //}
-                    // catch (Exception)
-                  //{
-                   //     lblZniżka.Text = "Błąd! Nie podałxś żadnej wartości!";
-
-            // }
+              
         }
 
 

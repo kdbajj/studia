@@ -26,7 +26,6 @@ namespace KarolinaDbaj_Kosmetyki
         static int liczbaKosmetykow = 0;
         private int numerProduktu;
         private string odcień;
-
         Bitmap image;
 
         public Kosmetyk()
@@ -205,5 +204,8 @@ namespace KarolinaDbaj_Kosmetyki
             if (s == "tak") return true;
             else return false;
         }
+       
     }
+
+
 }

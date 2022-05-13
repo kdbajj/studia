@@ -65,7 +65,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(12, 504);
+            this.button1.Location = new System.Drawing.Point(2, 504);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 53);
             this.button1.TabIndex = 0;
@@ -180,11 +180,11 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(209, 504);
+            this.button2.Location = new System.Drawing.Point(199, 504);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 53);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Wypełnij dane";
+            this.button2.Text = "Wypełnij swoimi danymi";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

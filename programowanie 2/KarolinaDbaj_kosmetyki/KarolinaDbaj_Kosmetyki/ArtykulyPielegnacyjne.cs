@@ -54,8 +54,7 @@ namespace KarolinaDbaj_Kosmetyki
         {
             float rabat;
             float cenaPoRabacie;
-           
-            if (pojemność!=50)
+            if (pojemność != 50)
             {
                 rabat = ((20 * cena) / 100);
                 cenaPoRabacie = cena - rabat;
@@ -66,6 +65,7 @@ namespace KarolinaDbaj_Kosmetyki
             cenaPoRabacie = cena - rabat;
             lblRabat.Text = "Produkt jest w pojemności 50 g,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
         }
+
         public float zaokraglij_2(float cenaPoRabacie)
         {
            
@@ -74,6 +74,7 @@ namespace KarolinaDbaj_Kosmetyki
             wynik = (float)a / 100;
             return wynik;
         }
+
     }
 }
 

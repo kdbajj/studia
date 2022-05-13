@@ -70,7 +70,7 @@
             this.btnPielegnacja.Name = "btnPielegnacja";
             this.btnPielegnacja.Size = new System.Drawing.Size(136, 67);
             this.btnPielegnacja.TabIndex = 0;
-            this.btnPielegnacja.Text = "Wczytaj wartości pól i utwórz obiekt";
+            this.btnPielegnacja.Text = "Przykładowe dane";
             this.btnPielegnacja.UseVisualStyleBackColor = false;
             this.btnPielegnacja.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -99,10 +99,10 @@
             // 
             this.lblRabat.AutoSize = true;
             this.lblRabat.BackColor = System.Drawing.Color.Transparent;
-            this.lblRabat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblRabat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblRabat.Location = new System.Drawing.Point(-4, 441);
             this.lblRabat.Name = "lblRabat";
-            this.lblRabat.Size = new System.Drawing.Size(22, 32);
+            this.lblRabat.Size = new System.Drawing.Size(17, 25);
             this.lblRabat.TabIndex = 3;
             this.lblRabat.Text = ".";
             // 
