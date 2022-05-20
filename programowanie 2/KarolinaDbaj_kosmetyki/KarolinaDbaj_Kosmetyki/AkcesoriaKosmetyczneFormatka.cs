@@ -16,26 +16,22 @@ namespace KarolinaDbaj_Kosmetyki
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AkcesoriaKosmetyczne artykuly = new AkcesoriaKosmetyczne();
             artykuly.Wypisz(lblAkcesoria);
            
         }
-
         private void AkcesoriaKosmetyczneFormatka_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
            
           
             
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             //string[] odcienieSzczotki = comboBox3.Items.Cast<Object>().Select(item => item.ToString()).ToArray();
@@ -46,7 +42,13 @@ namespace KarolinaDbaj_Kosmetyki
           
          
         }
+        private void AkcesoriaKosmetyczneFormatka_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
-            /*int numerProduktu, bool testowanyDermatologicznie, int waga, string materiałWykonania,
-            bool przyjazneŚrodowisku, string doCzegoSłuży*/
