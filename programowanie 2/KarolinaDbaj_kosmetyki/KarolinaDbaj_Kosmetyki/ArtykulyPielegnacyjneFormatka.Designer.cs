@@ -65,6 +65,7 @@
             // btnPielegnacja
             // 
             this.btnPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.btnPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPielegnacja.Location = new System.Drawing.Point(-7, 371);
             this.btnPielegnacja.Name = "btnPielegnacja";
@@ -76,16 +77,19 @@
             // 
             // lblPielegnacja
             // 
+            this.lblPielegnacja.BackColor = System.Drawing.Color.LavenderBlush;
+            this.lblPielegnacja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblPielegnacja.FormattingEnabled = true;
             this.lblPielegnacja.ItemHeight = 16;
             this.lblPielegnacja.Location = new System.Drawing.Point(2, 11);
             this.lblPielegnacja.Name = "lblPielegnacja";
-            this.lblPielegnacja.Size = new System.Drawing.Size(277, 340);
+            this.lblPielegnacja.Size = new System.Drawing.Size(277, 336);
             this.lblPielegnacja.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.Location = new System.Drawing.Point(651, 523);
             this.button2.Name = "button2";
@@ -109,6 +113,7 @@
             // BtnUżytkownikPielegnacja
             // 
             this.BtnUżytkownikPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.BtnUżytkownikPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUżytkownikPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BtnUżytkownikPielegnacja.Location = new System.Drawing.Point(143, 371);
             this.BtnUżytkownikPielegnacja.Name = "BtnUżytkownikPielegnacja";

@@ -21,5 +21,12 @@ namespace KarolinaDbaj_Kosmetyki
         {
             Application.Exit();
         }
+
+        private void Przeglad_Load(object sender, EventArgs e)
+        {
+
+        }
+        public static List<Kosmetyk> kosmetyki = new List<Kosmetyk>();
+
     }
 }

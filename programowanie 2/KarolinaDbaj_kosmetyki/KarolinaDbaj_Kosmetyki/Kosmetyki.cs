@@ -12,7 +12,7 @@ using System.Windows.Forms.VisualStyles;
 namespace KarolinaDbaj_Kosmetyki
 {
 
-    public class Kosmetyk
+    public abstract class Kosmetyk
     {
         int numer;
         string nazwaMarki;
@@ -143,7 +143,7 @@ namespace KarolinaDbaj_Kosmetyki
 
 
 
-        public virtual void Wypisz(ListBox lb)
+        public virtual void Wypisz(ListBox lb)//metoda wirtualna w klasie bazowej
         {
             lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
             lb.Items.Add("Nazwa marki:" + nazwaMarki);
@@ -167,7 +167,7 @@ namespace KarolinaDbaj_Kosmetyki
         public float ObliczZniżkę(int liczbaProduktów)
         {
 
-            var kosmetyk = new Kosmetyk();
+            //var kosmetyk = new Kosmetyk();
             var textBoxZniżka = new TextBox();
             var lblZniżka = new Label();
             textBoxZniżka.Text = "" + liczbaProduktów;

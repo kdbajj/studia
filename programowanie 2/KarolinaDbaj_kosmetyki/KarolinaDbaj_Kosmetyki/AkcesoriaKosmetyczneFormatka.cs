@@ -35,12 +35,15 @@ namespace KarolinaDbaj_Kosmetyki
         private void button3_Click(object sender, EventArgs e)
         {
             //string[] odcienieSzczotki = comboBox3.Items.Cast<Object>().Select(item => item.ToString()).ToArray();
+           // var artykul1 = new AkcesoriaKosmetyczne(Convert.ToInt32(textBox1.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), Convert.ToInt32(textBox3.Text), textBox4.Text, Kosmetyk.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox6.Text);
+           // Przeglad.kosmetyki.Add(artykul1);
+           // Przeglad.kosmetyki[Przeglad.kosmetyki.Count - 1].Wypisz(listBoxKosmetyk);
 
-            var artykul1 = new AkcesoriaKosmetyczne(Convert.ToInt32(textBox1.Text), Kosmetyk.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()),Convert.ToInt32(textBox3.Text),textBox4.Text, Kosmetyk.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()),textBox6.Text);
-           artykul1.Wypisz(lblAkcesoria);
-            lblAkcesoria.Items.Add("");
-          
-         
+            //artykul1.Wypisz(lblAkcesoria);
+            // lblAkcesoria.Items.Add("");
+
+
+
         }
         private void AkcesoriaKosmetyczneFormatka_Load(object sender, EventArgs e)
         {

@@ -51,6 +51,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(23, 506);
             this.button1.Name = "button1";
@@ -62,17 +63,20 @@
             // 
             // lblAkcesoria
             // 
+            this.lblAkcesoria.BackColor = System.Drawing.Color.LavenderBlush;
+            this.lblAkcesoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblAkcesoria.FormattingEnabled = true;
             this.lblAkcesoria.ItemHeight = 16;
             this.lblAkcesoria.Location = new System.Drawing.Point(23, 16);
             this.lblAkcesoria.Name = "lblAkcesoria";
             this.lblAkcesoria.ScrollAlwaysVisible = true;
-            this.lblAkcesoria.Size = new System.Drawing.Size(296, 484);
+            this.lblAkcesoria.Size = new System.Drawing.Size(296, 480);
             this.lblAkcesoria.TabIndex = 5;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.Location = new System.Drawing.Point(182, 506);
             this.button3.Name = "button3";

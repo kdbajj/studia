@@ -62,11 +62,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(2, 495);
+            this.button1.Location = new System.Drawing.Point(2, 545);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 62);
             this.button1.TabIndex = 0;
@@ -76,14 +76,15 @@
             // 
             // listBoxKosmetyk
             // 
+            this.listBoxKosmetyk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxKosmetyk.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.listBoxKosmetyk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBoxKosmetyk.FormattingEnabled = true;
             this.listBoxKosmetyk.ItemHeight = 22;
-            this.listBoxKosmetyk.Location = new System.Drawing.Point(2, 192);
+            this.listBoxKosmetyk.Location = new System.Drawing.Point(2, 275);
             this.listBoxKosmetyk.Name = "listBoxKosmetyk";
             this.listBoxKosmetyk.ScrollAlwaysVisible = true;
-            this.listBoxKosmetyk.Size = new System.Drawing.Size(372, 290);
+            this.listBoxKosmetyk.Size = new System.Drawing.Size(372, 264);
             this.listBoxKosmetyk.TabIndex = 1;
             // 
             // btnAkcesoria
@@ -91,6 +92,7 @@
             this.btnAkcesoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAkcesoria.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAkcesoria.BackgroundImage")));
             this.btnAkcesoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAkcesoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAkcesoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAkcesoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnAkcesoria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -107,6 +109,7 @@
             this.btnPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPielegnacja.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPielegnacja.BackgroundImage")));
             this.btnPielegnacja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPielegnacja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPielegnacja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -160,9 +163,10 @@
             // btnZniżka
             // 
             this.btnZniżka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.btnZniżka.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnZniżka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZniżka.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZniżka.Location = new System.Drawing.Point(2, 152);
+            this.btnZniżka.Location = new System.Drawing.Point(29, 211);
             this.btnZniżka.Name = "btnZniżka";
             this.btnZniżka.Size = new System.Drawing.Size(302, 34);
             this.btnZniżka.TabIndex = 7;
@@ -173,7 +177,7 @@
             // textBoxZniżka
             // 
             this.textBoxZniżka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.textBoxZniżka.Location = new System.Drawing.Point(2, 124);
+            this.textBoxZniżka.Location = new System.Drawing.Point(29, 173);
             this.textBoxZniżka.Name = "textBoxZniżka";
             this.textBoxZniżka.Size = new System.Drawing.Size(302, 22);
             this.textBoxZniżka.TabIndex = 8;
@@ -182,11 +186,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(199, 495);
+            this.button2.Location = new System.Drawing.Point(199, 545);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 62);
             this.button2.TabIndex = 9;
@@ -339,6 +343,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.Location = new System.Drawing.Point(380, 290);
             this.button3.Name = "button3";
@@ -351,6 +356,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Azure;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button4.Location = new System.Drawing.Point(380, 333);
             this.button4.Name = "button4";
@@ -367,7 +373,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(958, 569);
+            this.ClientSize = new System.Drawing.Size(958, 619);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox6);

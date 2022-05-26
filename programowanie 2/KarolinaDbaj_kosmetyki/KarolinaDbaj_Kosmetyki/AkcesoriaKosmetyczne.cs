@@ -53,18 +53,18 @@ namespace KarolinaDbaj_Kosmetyki
             this.odcienieSzczotki.Add("różowy");
             this.odcienieSzczotki.Add("fioletowy");
         }
-        public override void Wypisz(ListBox lblAkcesoria)
+        public override void Wypisz(ListBox listboxKosmetyk)
         {
-            base.Wypisz(lblAkcesoria); //wywołanie metody Write Z KLASY BAZOWEJ 
-            lblAkcesoria.Items.Add("Waga produktu w gramach: " + waga);
-            lblAkcesoria.Items.Add("Materiał wykonania: " + materiałWykonania);
-            lblAkcesoria.Items.Add("Czy produkt jest przyjazny środowisku: " + przyjazneŚrodowisku);
-            lblAkcesoria.Items.Add("Do czego służy: " + doCzegoSłuży);
-            lblAkcesoria.Items.Add("Szczotka dostępna w takich kolorach:");
-            lblAkcesoria.Items.Add(odcienieSzczotki[0]);
-            lblAkcesoria.Items.Add(odcienieSzczotki[1]);
-            lblAkcesoria.Items.Add(odcienieSzczotki[2]);
-            NowyProdukt();
+            base.Wypisz(listboxKosmetyk); //wywołanie metody Write Z KLASY BAZOWEJ 
+            listboxKosmetyk.Items.Add("Waga produktu w gramach: " + waga);
+            listboxKosmetyk.Items.Add("Materiał wykonania: " + materiałWykonania);
+            listboxKosmetyk.Items.Add("Czy produkt jest przyjazny środowisku: " + przyjazneŚrodowisku);
+            listboxKosmetyk.Items.Add("Do czego służy: " + doCzegoSłuży);
+            listboxKosmetyk.Items.Add("Szczotka dostępna w takich kolorach:");
+            listboxKosmetyk.Items.Add(odcienieSzczotki[0]);
+            listboxKosmetyk.Items.Add(odcienieSzczotki[1]);
+            listboxKosmetyk.Items.Add(odcienieSzczotki[2]);
+            //NowyProdukt();
         }
         private int PrzyjazneŚrodowisku()
         {
