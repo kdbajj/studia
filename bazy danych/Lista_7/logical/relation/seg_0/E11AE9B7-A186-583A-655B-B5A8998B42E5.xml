@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Wykłada" directorySegmentName="seg_0" id="E11AE9B7-A186-583A-655B-B5A8998B42E5">
+<createdBy>KarolinaGamerGamer</createdBy>
+<createdTime>2022-05-09 12:23:44 UTC</createdTime>
+<ownerDesignName>Lista_7</ownerDesignName>
+<engineerTo>
+<item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
+</engineerTo>
+<sourcePk>87B94CF3-DE14-EDFC-FFC1-DEEE17C388AC</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>11E5E9F9-D7AA-BE8F-9B80-020DE3B864A0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B605CF5E-8E33-0AC0-32E4-AD8920EFF780</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

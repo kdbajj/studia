@@ -23,7 +23,7 @@ namespace KarolinaDbaj_Kosmetyki
         string wykończenie;
         int trwałośćWMiesiącach;
         private DateTime dataZakupu;
-        static int liczbaKosmetykow = 0;
+        static int liczbaKosmetykow = -1;
         private int numerProduktu;
         //private string odcień;
         protected Bitmap image;
@@ -152,14 +152,15 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public virtual void Wypisz(ListBox lb)//metoda wirtualna w klasie bazowej
         {
-            lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
-            lb.Items.Add("Nazwa marki:" + nazwaMarki);
+            //numer += 0;
+            //lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
+            //lb.Items.Add("Nazwa marki:" + nazwaMarki);
             //lb.Items.Add("rodzaj kosmetyku:" + rodzajKosmetyku);
 
             lb.Items.Add("Cena produktu: " + cena);
-            //lb.Items.Add("Kod produktu: " + kodProduktu + NowyProdukt());
+            lb.Items.Add("Kod produktu: " + kodProduktu);
 
-            //lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
+            lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
             lb.Items.Add("Wykończenie: " + wykończenie);
             lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
             // lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
@@ -169,18 +170,19 @@ namespace KarolinaDbaj_Kosmetyki
 
         public virtual void Wypisz(ListBox lb,PictureBox pb)//metoda wirtualna w klasie bazowej
         {
+            //numer += 1;
             lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
             lb.Items.Add("Nazwa marki:" + nazwaMarki);
             //lb.Items.Add("rodzaj kosmetyku:" + rodzajKosmetyku);
 
-            lb.Items.Add("Cena produktu: " + cena);
+            //lb.Items.Add("Cena produktu: " + cena);
             //lb.Items.Add("Kod produktu: " + kodProduktu + NowyProdukt());
 
             //lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
-            lb.Items.Add("Wykończenie: " + wykończenie);
-            lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
-            // lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
-            //  lb.Items.Add("Data zakupu: " + dataZakupu);
+           // lb.Items.Add("Wykończenie: " + wykończenie);
+            //lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
+            //lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
+            //lb.Items.Add("Data zakupu: " + dataZakupu);
             pb.Image = image;
 
         }

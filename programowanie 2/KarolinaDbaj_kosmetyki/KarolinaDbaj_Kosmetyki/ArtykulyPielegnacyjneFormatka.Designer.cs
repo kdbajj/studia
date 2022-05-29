@@ -61,7 +61,7 @@
             this.btnPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.btnPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPielegnacja.Location = new System.Drawing.Point(477, 41);
+            this.btnPielegnacja.Location = new System.Drawing.Point(750, 12);
             this.btnPielegnacja.Name = "btnPielegnacja";
             this.btnPielegnacja.Size = new System.Drawing.Size(136, 67);
             this.btnPielegnacja.TabIndex = 0;
@@ -98,7 +98,7 @@
             this.lblRabat.AutoSize = true;
             this.lblRabat.BackColor = System.Drawing.Color.Transparent;
             this.lblRabat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblRabat.Location = new System.Drawing.Point(745, 180);
+            this.lblRabat.Location = new System.Drawing.Point(726, 180);
             this.lblRabat.Name = "lblRabat";
             this.lblRabat.Size = new System.Drawing.Size(17, 25);
             this.lblRabat.TabIndex = 3;
@@ -164,7 +164,7 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.Location = new System.Drawing.Point(287, 182);
+            this.textBox11.Location = new System.Drawing.Point(281, 182);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(131, 24);
             this.textBox11.TabIndex = 28;
@@ -172,7 +172,7 @@
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox12.Location = new System.Drawing.Point(286, 211);
+            this.textBox12.Location = new System.Drawing.Point(280, 211);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(131, 24);
             this.textBox12.TabIndex = 29;

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11E5E9F9-D7AA-BE8F-9B80-020DE3B864A0" name="Wykładowca">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="86D9CA69-9584-BEFF-C68E-08F0CABC1AA7" name="Przedmiot">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:02:50 UTC</createdTime>
+<createdTime>2022-05-09 12:25:30 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Indentyfikator" id="1C7D207E-2DDD-A5E5-3EC9-CCBE451CA60D">
+<Attribute name="PrzKod" id="01C67400-DB3C-52F9-4371-8346189EAA84">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:03:25 UTC</createdTime>
+<createdTime>2022-05-09 12:26:06 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
@@ -25,62 +25,70 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Stanowisko" id="5818B868-0B8F-0ECD-2C7F-C445D8142DAE">
+<Attribute name="Punkty" id="BDF6FA33-C264-5223-EA34-765BDCF91444">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:03:43 UTC</createdTime>
+<createdTime>2022-05-09 12:26:22 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="WykImięNazwisko" id="959C2132-27F8-EC33-E443-291C5D860A3D">
+<Attribute name="PrzNazwa" id="9D50137D-D84D-4A91-9F59-F2682426BC55">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:03:51 UTC</createdTime>
+<createdTime>2022-05-09 12:26:50 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="WykGabinet" id="B9198E06-C740-4D53-90CF-9495B92E38CB">
+<Attribute name="PrzRok" id="F6D05FFD-33F5-A95F-C892-F1617BCB5EFB">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:04:12 UTC</createdTime>
+<createdTime>2022-05-09 12:27:08 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="WykTelefon" id="96C53684-0250-67CF-FB2A-293B634A746C">
+<Attribute name="PrzOpis" id="18343337-2FD3-4068-963F-A732567AE45A">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:04:23 UTC</createdTime>
+<createdTime>2022-05-09 12:27:29 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="87B94CF3-DE14-EDFC-FFC1-DEEE17C388AC" name="Wykładowca PK">
+<identifier id="DEBA8B47-ACE9-31B9-AFDA-9DA00934405F" name="Przedmiot PK">
 <createdBy>KarolinaGamerGamer</createdBy>
-<createdTime>2022-05-09 12:03:39 UTC</createdTime>
+<createdTime>2022-05-09 12:26:15 UTC</createdTime>
 <ownerDesignName>Lista_7</ownerDesignName>
 <engineerTo>
 <item key="4B0212F8-EF73-910F-9CE1-FA047D8562FF" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>1C7D207E-2DDD-A5E5-3EC9-CCBE451CA60D</attributeRef>
+<attributeRef>01C67400-DB3C-52F9-4371-8346189EAA84</attributeRef>
+<attributeRef>9D50137D-D84D-4A91-9F59-F2682426BC55</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

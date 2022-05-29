@@ -23,11 +23,9 @@ namespace KarolinaDbaj_Kosmetyki
             textBox3.Text="200";
             textBox4.Text="plastik";
             textBox6.Text="rozczeswanie włosów";
-           
             pictureBox2.Image = null;
             lblAkcesoria.Items.Clear();
             labelNowyProdukt.Text = "";
-
         }
         private void ClearTextBoxes()
         {
@@ -44,8 +42,8 @@ namespace KarolinaDbaj_Kosmetyki
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            
+
+
 
         }
         private void button3_Click(object sender, EventArgs e)
@@ -83,9 +81,6 @@ namespace KarolinaDbaj_Kosmetyki
             lblAkcesoria.Items.Clear();
             pictureBox2.Image = null;
         }
-
-
-
 
         private void AkcesoriaKosmetyczneFormatka_Load(object sender, EventArgs e)
         {

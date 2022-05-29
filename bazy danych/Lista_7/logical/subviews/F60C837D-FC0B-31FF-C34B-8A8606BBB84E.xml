@@ -16,7 +16,15 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="11E5E9F9-D7AA-BE8F-9B80-020DE3B864A0" otype="Entity" vid="CDE8E8EB-77A2-659D-F246-83D615A19A71">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="451" y="57" width="192" height="127"/>
+<bounds x="753" y="51" width="192" height="127"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="86D9CA69-9584-BEFF-C68E-08F0CABC1AA7" otype="Entity" vid="B1C77D5F-B966-E0D5-EFA5-D26A1CD89524">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="108" y="398" width="209" height="126"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="B605CF5E-8E33-0AC0-32E4-AD8920EFF780" otype="Entity" vid="9567F916-F27F-D71A-70BC-C0B3FE12F416">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="780" y="315" width="170" height="110"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="DE197404-B7FF-C3C7-5026-8E067B198AE6" otype="Entity" vid="BB34DB5A-A79C-7E00-B395-EAA72F38BE25">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -29,8 +37,26 @@
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="298" y="118"/>
-<point x="451" y="118"/>
+<point x="298" y="115"/>
+<point x="753" y="115"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="6B633092-F603-A484-CFF7-CFF7A5BB49B2" otype="Relation" vid_source="B1C77D5F-B966-E0D5-EFA5-D26A1CD89524" vid_target="9567F916-F27F-D71A-70BC-C0B3FE12F416">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="317" y="411"/>
+<point x="780" y="411"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="E11AE9B7-A186-583A-655B-B5A8998B42E5" otype="Relation" vid_source="CDE8E8EB-77A2-659D-F246-83D615A19A71" vid_target="9567F916-F27F-D71A-70BC-C0B3FE12F416">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="862" y="178"/>
+<point x="862" y="315"/>
 </points>
 </Connector>
 </connectors>
