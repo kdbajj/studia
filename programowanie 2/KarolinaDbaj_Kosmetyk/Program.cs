@@ -18,5 +18,7 @@ namespace KarolinaDbaj_Kosmetyk
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        public static List<Kosmetyk> Kosmetyki = new List<Kosmetyk>();
     }
 }

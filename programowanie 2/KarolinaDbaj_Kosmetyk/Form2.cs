@@ -10,24 +10,23 @@ using System.Windows.Forms;
 
 namespace KarolinaDbaj_Kosmetyk
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        public static int number = 0;
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
+            ArtykulyPielegnacyjne artykulyPielegnacyjne = new ArtykulyPielegnacyjne(textBox1.Text, textBox2.Text);
+            Program.Kosmetyki.Add(artykulyPielegnacyjne);
+            Program.Kosmetyki[Program.Kosmetyki.Count - 1].Write(listBox1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Kosmetyk.LoadImageDialog(pictureBox1);
         }
     }
 }

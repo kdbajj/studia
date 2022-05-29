@@ -16,7 +16,8 @@ namespace KarolinaDbaj_Kosmetyki
         int pojemność;
         string dlaKogo;
         bool wegańskie;
-        string działanie;
+        string działanie; 
+        float cena;
 
         public ArtykulyPielegnacyjne() : base()
         {
@@ -41,11 +42,13 @@ namespace KarolinaDbaj_Kosmetyki
             this.działanie = działanie;
         }
         */
-        public ArtykulyPielegnacyjne(int numerProduktu, string nazwa, int pojemność,
-            bool wegańskie, string dlaKogo, string działanie, Bitmap image, bool testowanyDermatologicznie)
-            : base(numerProduktu, testowanyDermatologicznie, image)
+        public ArtykulyPielegnacyjne(int numerProduktu, string nazwa, int pojemność,float cena,
+            bool wegańskie, string dlaKogo, string działanie, Bitmap image,
+            bool testowanyDermatologicznie,string marka)
+            : base(cena, marka, numerProduktu, testowanyDermatologicznie, image)
         {
             //this.numer = numer;
+            //this.cena = cena;
             this.nazwa = nazwa;
             this.pojemność = pojemność;
             this.dlaKogo = dlaKogo;
@@ -68,10 +71,11 @@ namespace KarolinaDbaj_Kosmetyki
             lblPielegnacja.Items.Add("Dla kogo: " + dlaKogo);
             lblPielegnacja.Items.Add("Wegański produkt: " + wegańskie);
             lblPielegnacja.Items.Add("Działanie: " + działanie);
-            NowyProdukt();
+            //NowyProdukt();
         }
         public override void Wypisz(ListBox lb, PictureBox pb)
         {
+            
             base.Wypisz(lb, pb); //wywołanie metody Write Z KLASY BAZOWEJ 
             base.Wypisz(lb); //wywołanie metody Write Z KLASY BAZOWEJ (Person)
             lb.Items.Add("Nazwa: " + nazwa);
@@ -79,22 +83,30 @@ namespace KarolinaDbaj_Kosmetyki
             lb.Items.Add("Dla kogo: " + dlaKogo);
             lb.Items.Add("Wegański produkt: " + wegańskie);
             lb.Items.Add("Działanie: " + działanie);
-            NowyProdukt();
+            Uczulenie();
+            //NowyProdukt();
+
         }
-        public void ObliczanieRabatu(Label lblRabat)
+        public void ObliczanieRabatu(Label lb,ComboBox cb)
         {
+            //Label lb = new Label();
+            //ComboBox cb = new ComboBox();
+             cena = GetInputValidator.ConvertToFloat(cb.Text);
             float rabat;
             float cenaPoRabacie;
-            if (pojemność != 50)
+            if (GetInputValidator.ConvertToFloat(cb.Text) != 50)
             {
                 rabat = ((20 * cena) / 100);
                 cenaPoRabacie = cena - rabat;
-                lblRabat.Text = "Produkt nie jest w pojemności 50g, \n więc rabat wynosi 10%, \n cena po zniżce to: " + zaokraglij_2(cenaPoRabacie) + " zł!";
+                lb.Text = "Produkt nie jest w pojemności 50g, \n więc rabat wynosi 10%, \n cena po zniżce to: " + zaokraglij_2(cenaPoRabacie) + " zł!";
             }
-            else
+            else if (GetInputValidator.ConvertToFloat(cb.Text) == 50)
+            {
                 rabat = ((10 * cena) / 100);
-            cenaPoRabacie = cena - rabat;
-            lblRabat.Text = "Produkt jest w pojemności 50 g,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
+                cenaPoRabacie = cena - rabat;
+                lb.Text = "Produkt jest w pojemności 50g,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
+            }
+                
         }
 
         public float zaokraglij_2(float cenaPoRabacie)

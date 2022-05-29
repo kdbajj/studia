@@ -23,6 +23,8 @@ namespace KarolinaDbaj_Kosmetyki
             textBox1.Text = "1234";
             textBox11.Text = "cera trądzikowa";
             textBox2.Text = "Żel nawilżający";
+            textBox7.Text = "The ordinary";
+            textBox5.Text = "49,99";
             textBox12.Text = "myjące";
             pictureBox2.Image = null;
             lblPielegnacja.Items.Clear();
@@ -42,31 +44,31 @@ namespace KarolinaDbaj_Kosmetyki
             artykulyPielegnacyjne.Wypisz(lblPielegnacja);
             lblPielegnacja.Items.Add("");*/
 
-            ArtykulyPielegnacyjne artykul = new ArtykulyPielegnacyjne(Convert.ToInt32(textBox1.Text),textBox2.Text, Convert.ToInt32(comboBox2.SelectedItem), AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox11.Text, textBox12.Text, (Bitmap)pictureBox2.Image, AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString())); 
+            ArtykulyPielegnacyjne artykul = new ArtykulyPielegnacyjne(Convert.ToInt32(textBox1.Text), textBox2.Text, Convert.ToInt32(comboBox2.SelectedItem), GetInputValidator.ConvertToFloat(textBox5.Text), AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox11.Text, textBox12.Text, (Bitmap)pictureBox2.Image, AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), textBox7.Text);
             labelNowyProdukt.Text = "Nowy produkt:";
             Form1.kosmetyki.Add(artykul); //dodanie obiektu do listy
             lblPielegnacja.Items.Clear(); //wyczyszczenie listBoxa
             labelNowyProdukt.Text = "";
             labelNowyProdukt.Text = "NOWY PRODUKT ZOSTAŁ DODANY DO LISTY";
             Form1.kosmetyki[Form1.kosmetyki.Count - 1].Wypisz(lblPielegnacja, pictureBox2);
+            
         }
-
 
         private void btnkPielegnacja_Click(object sender, EventArgs e)
         {
 
-            var artykul = new ArtykulyPielegnacyjne();
-            artykul.ObliczanieRabatu(lblRabat);
+            //var artykul = new ArtykulyPielegnacyjne();
+            //artykul.ObliczanieRabatu(lblRabat);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             var artykuł = new ArtykulyPielegnacyjne();
-            artykuł.ObliczanieRabatu(lblRabat);
-           
-        }
+            // artykuł.ObliczanieRabatu(lblRabat);
+           artykuł.ObliczanieRabatu(lblRabat, comboBox2);
 
+        }
         private void ArtykulyPielegnacyjneFormatka_Load(object sender, EventArgs e)
         {
 

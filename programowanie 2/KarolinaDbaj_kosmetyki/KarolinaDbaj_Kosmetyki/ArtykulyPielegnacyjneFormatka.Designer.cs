@@ -53,6 +53,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +65,7 @@
             this.btnPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.btnPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPielegnacja.Location = new System.Drawing.Point(750, 12);
+            this.btnPielegnacja.Location = new System.Drawing.Point(750, 16);
             this.btnPielegnacja.Name = "btnPielegnacja";
             this.btnPielegnacja.Size = new System.Drawing.Size(136, 67);
             this.btnPielegnacja.TabIndex = 0;
@@ -75,9 +79,9 @@
             this.lblPielegnacja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblPielegnacja.FormattingEnabled = true;
             this.lblPielegnacja.ItemHeight = 16;
-            this.lblPielegnacja.Location = new System.Drawing.Point(281, 394);
+            this.lblPielegnacja.Location = new System.Drawing.Point(188, 392);
             this.lblPielegnacja.Name = "lblPielegnacja";
-            this.lblPielegnacja.Size = new System.Drawing.Size(419, 208);
+            this.lblPielegnacja.Size = new System.Drawing.Size(463, 224);
             this.lblPielegnacja.TabIndex = 1;
             // 
             // button2
@@ -85,7 +89,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(762, 408);
+            this.button2.Location = new System.Drawing.Point(766, 408);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 49);
             this.button2.TabIndex = 2;
@@ -109,7 +113,7 @@
             this.BtnUżytkownikPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.BtnUżytkownikPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUżytkownikPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BtnUżytkownikPielegnacja.Location = new System.Drawing.Point(98, 394);
+            this.BtnUżytkownikPielegnacja.Location = new System.Drawing.Point(16, 394);
             this.BtnUżytkownikPielegnacja.Name = "BtnUżytkownikPielegnacja";
             this.BtnUżytkownikPielegnacja.Size = new System.Drawing.Size(163, 78);
             this.BtnUżytkownikPielegnacja.TabIndex = 4;
@@ -323,12 +327,50 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(449, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 25);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Cena:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(442, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 25);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Marka:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(530, 82);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(121, 22);
+            this.textBox5.TabIndex = 51;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(530, 45);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(121, 22);
+            this.textBox7.TabIndex = 50;
+            // 
             // ArtykulyPielegnacyjneFormatka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1032, 618);
+            this.ClientSize = new System.Drawing.Size(1103, 637);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
@@ -390,5 +432,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }

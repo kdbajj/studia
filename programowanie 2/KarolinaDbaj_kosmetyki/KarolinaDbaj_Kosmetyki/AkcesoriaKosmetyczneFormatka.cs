@@ -23,6 +23,8 @@ namespace KarolinaDbaj_Kosmetyki
             textBox3.Text="200";
             textBox4.Text="plastik";
             textBox6.Text="rozczeswanie włosów";
+            textBox7.Text = "Tangle teezer";
+            textBox5.Text = "39,99";
             pictureBox2.Image = null;
             lblAkcesoria.Items.Clear();
             labelNowyProdukt.Text = "";
@@ -50,12 +52,14 @@ namespace KarolinaDbaj_Kosmetyki
         {
 
 
-            AkcesoriaKosmetyczne akcesoria = new AkcesoriaKosmetyczne(Convert.ToInt32(textBox1.Text), textBox2.Text, AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), Convert.ToInt32(textBox3.Text), textBox4.Text, AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox6.Text, (Bitmap)pictureBox2.Image);
+            AkcesoriaKosmetyczne akcesoria = new AkcesoriaKosmetyczne(Convert.ToInt32(textBox1.Text), textBox2.Text, AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), Convert.ToInt32(textBox3.Text), textBox4.Text,textBox7.Text, GetInputValidator.ConvertToFloat(textBox5.Text), AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox6.Text, (Bitmap)pictureBox2.Image);
             labelNowyProdukt.Text = "Nowy produkt:";
             Form1.kosmetyki.Add(akcesoria); //dodanie obiektu do listy
             lblAkcesoria.Items.Clear(); //wyczyszczenie listBoxa
             labelNowyProdukt.Text = "";
             labelNowyProdukt.Text = "NOWY PRODUKT ZOSTAŁ DODANY DO LISTY";
+            //Program.Kosmetyki.Add(artykulyPielegnacyjne);
+           // Program.Kosmetyki[Program.Kosmetyki.Count - 1].Write(listBox1);
             Form1.kosmetyki[Form1.kosmetyki.Count - 1].Wypisz(lblAkcesoria, pictureBox2);
         }
         //string[] odcienieSzczotki = comboBox3.Items.Cast<Object>().Select(item => item.ToString()).ToArray();
