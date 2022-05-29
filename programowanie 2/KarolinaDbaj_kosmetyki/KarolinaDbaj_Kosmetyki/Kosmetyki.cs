@@ -25,8 +25,9 @@ namespace KarolinaDbaj_Kosmetyki
         private DateTime dataZakupu;
         static int liczbaKosmetykow = 0;
         private int numerProduktu;
-        private string odcień;
-        Bitmap image;
+        //private string odcień;
+        protected Bitmap image;
+        
 
         public Kosmetyk()
         {
@@ -76,11 +77,12 @@ namespace KarolinaDbaj_Kosmetyki
 
 
         }
-        public Kosmetyk(int numerProduktu, bool testowanyDermatologicznie)
+        public Kosmetyk(int numerProduktu, bool testowanyDermatologicznie, Bitmap image)
         {
 
             this.numerProduktu = numerProduktu;
             this.testowanyDermatologicznie = testowanyDermatologicznie;
+            this.image = image;
 
         }
         public Kosmetyk(int numer, string nazwaMarki, string rodzajKosmetyku, float cena, int numerProduktu,
@@ -92,7 +94,7 @@ namespace KarolinaDbaj_Kosmetyki
             this.rodzajKosmetyku = rodzajKosmetyku;
 
             this.cena = cena;
-            this.kodProduktu = kodProduktu;
+            //this.kodProduktu = kodProduktu;
 
             this.testowanyDermatologicznie = testowanyDermatologicznie;
             this.wykończenie = wykończenie;
@@ -140,25 +142,57 @@ namespace KarolinaDbaj_Kosmetyki
                 MessageBox.Show("Jeśli jesteś podatny/a na wszelkie alergie, sprawdź skład produktu przed zakupem.", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return 0;
         }
-
-
-
+        public virtual void WriteToFile(StreamWriter sw)
+        {
+        }
+        //Definicja metody wirtualnej wczytującej wartości pól z pliku tekstowego
+        //Ciało funkcji jest zdefiniowane w odpowiednich funkcjach klas pochodnych
+        public virtual void ReadFromFile(StreamReader sr)
+        {
+        }
         public virtual void Wypisz(ListBox lb)//metoda wirtualna w klasie bazowej
         {
             lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
             lb.Items.Add("Nazwa marki:" + nazwaMarki);
-            lb.Items.Add("rodzaj kosmetyku:" + rodzajKosmetyku);
+            //lb.Items.Add("rodzaj kosmetyku:" + rodzajKosmetyku);
 
             lb.Items.Add("Cena produktu: " + cena);
             //lb.Items.Add("Kod produktu: " + kodProduktu + NowyProdukt());
 
-            lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
+            //lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
             lb.Items.Add("Wykończenie: " + wykończenie);
             lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
-            lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
-            lb.Items.Add("Data zakupu: " + dataZakupu);
+            // lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
+            //  lb.Items.Add("Data zakupu: " + dataZakupu);
 
         }
+
+        public virtual void Wypisz(ListBox lb,PictureBox pb)//metoda wirtualna w klasie bazowej
+        {
+            lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
+            lb.Items.Add("Nazwa marki:" + nazwaMarki);
+            //lb.Items.Add("rodzaj kosmetyku:" + rodzajKosmetyku);
+
+            lb.Items.Add("Cena produktu: " + cena);
+            //lb.Items.Add("Kod produktu: " + kodProduktu + NowyProdukt());
+
+            //lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
+            lb.Items.Add("Wykończenie: " + wykończenie);
+            lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
+            // lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
+            //  lb.Items.Add("Data zakupu: " + dataZakupu);
+            pb.Image = image;
+
+        }
+        public virtual void WritePhotoToFile(string fullFileName)
+        {
+        }
+        //Definicja metody wirtualnej ReadPhotoFromFile
+        //Ciało funkcji jest zdefiniowane w odpowiednich funkcjach klas pochodnych
+        public virtual void ReadPhotoFromFile(string fullFileName)
+        {
+        }
+
 
         ~Kosmetyk()
         {
@@ -199,10 +233,14 @@ namespace KarolinaDbaj_Kosmetyki
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        public static bool SetTestowanyDermatologicznie(string s)
+        public static void ZaladujZdjecie(PictureBox pb)
         {
-            if (s == "tak") return true;
-            else return false;
+            OpenFileDialog otworz = new OpenFileDialog();
+            if (otworz.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap f = new Bitmap(otworz.OpenFile());
+                pb.Image = f;
+            }
         }
        
     }

@@ -100,7 +100,7 @@
             this.btnAkcesoria.Name = "btnAkcesoria";
             this.btnAkcesoria.Size = new System.Drawing.Size(229, 132);
             this.btnAkcesoria.TabIndex = 2;
-            this.btnAkcesoria.Text = "Akcesoria kosmetyczne";
+            this.btnAkcesoria.Text = "Przegląd akcesoriów kosmetycznych";
             this.btnAkcesoria.UseVisualStyleBackColor = false;
             this.btnAkcesoria.Click += new System.EventHandler(this.btnAkcesoria_Click);
             // 
@@ -117,7 +117,7 @@
             this.btnPielegnacja.Name = "btnPielegnacja";
             this.btnPielegnacja.Size = new System.Drawing.Size(229, 124);
             this.btnPielegnacja.TabIndex = 3;
-            this.btnPielegnacja.Text = "Artykuły do pielęgnacji";
+            this.btnPielegnacja.Text = "Przęglądanie artykułów do pielęgnacji";
             this.btnPielegnacja.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPielegnacja.UseVisualStyleBackColor = false;
             this.btnPielegnacja.Click += new System.EventHandler(this.btnPielegnacja_Click);
@@ -355,7 +355,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Azure;
+            this.button4.BackColor = System.Drawing.Color.Thistle;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button4.Location = new System.Drawing.Point(380, 333);

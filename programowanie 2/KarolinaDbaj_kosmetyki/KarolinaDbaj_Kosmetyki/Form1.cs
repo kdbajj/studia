@@ -18,7 +18,8 @@ namespace KarolinaDbaj_Kosmetyki
             InitializeComponent();
             lblZniżka.Text = "Promocja! \n Kup jeden dostań 2 gratis!\n Działa nawet przy zakupie kilku sztuk!\n Wpisz ile produktów chcesz kupić \n i oblicz ile wynosi całkowity koszt:";
         }
-
+        Przeglad przeglad1 = new Przeglad();
+        public static List<Kosmetyk> kosmetyki= new List<Kosmetyk>();
 
         private void button1_Click(object sender, EventArgs e)
         {
