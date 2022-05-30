@@ -16,9 +16,9 @@ if(a==b)
           wyznacznik=wyznacznik*m1(i,i);
     endfor
   else
-       wyznacznik="Macierz nie jest diagonalna";#czynniki poza przek¹tn¹ g³ówn¹ nie s¹ zerowe
+       wyznacznik="macierz nie jest diagonalna!";#czynniki poza przek¹tn¹ g³ówn¹ nie s¹ zerowe
    endif
   else
-      wyznacznik="Macierz nie jest kwadratowa";# liczba kolumn i wierszy w macierzy nie s¹ sobie równe
+      wyznacznik="macierz nie jest kwadratowa!";# liczba kolumn i wierszy w macierzy nie s¹ sobie równe
    endif
 endfunction
