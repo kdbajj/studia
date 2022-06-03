@@ -11,9 +11,9 @@ namespace KarolinaDbaj_Kosmetyk
     class ArtykulyPielegnacyjne : Kosmetyk
     {
         private string derm;
-        public ArtykulyPielegnacyjne(string nazwa,Bitmap imageBitmap, string derm) : base(nazwa, imageBitmap)
+        public ArtykulyPielegnacyjne(string nazwa,Bitmap bitmap) : base(nazwa, imageBitmap)
         {
-            this.derm = derm;
+           
         }
 
         public override void Write(ListBox listBox)

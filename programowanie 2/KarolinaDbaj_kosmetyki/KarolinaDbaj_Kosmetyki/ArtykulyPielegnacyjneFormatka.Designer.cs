@@ -65,10 +65,10 @@
             this.btnPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.btnPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPielegnacja.Location = new System.Drawing.Point(750, 16);
+            this.btnPielegnacja.Location = new System.Drawing.Point(731, 25);
             this.btnPielegnacja.Name = "btnPielegnacja";
-            this.btnPielegnacja.Size = new System.Drawing.Size(136, 67);
-            this.btnPielegnacja.TabIndex = 0;
+            this.btnPielegnacja.Size = new System.Drawing.Size(204, 79);
+            this.btnPielegnacja.TabIndex = 1;
             this.btnPielegnacja.Text = "Uzupełnij";
             this.btnPielegnacja.UseVisualStyleBackColor = false;
             this.btnPielegnacja.Click += new System.EventHandler(this.button1_Click);
@@ -79,10 +79,10 @@
             this.lblPielegnacja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblPielegnacja.FormattingEnabled = true;
             this.lblPielegnacja.ItemHeight = 16;
-            this.lblPielegnacja.Location = new System.Drawing.Point(188, 392);
+            this.lblPielegnacja.Location = new System.Drawing.Point(184, 406);
             this.lblPielegnacja.Name = "lblPielegnacja";
             this.lblPielegnacja.Size = new System.Drawing.Size(463, 224);
-            this.lblPielegnacja.TabIndex = 1;
+            this.lblPielegnacja.TabIndex = 13;
             // 
             // button2
             // 
@@ -92,7 +92,7 @@
             this.button2.Location = new System.Drawing.Point(766, 408);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(237, 49);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Oblicz rabat!";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -113,10 +113,10 @@
             this.BtnUżytkownikPielegnacja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.BtnUżytkownikPielegnacja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUżytkownikPielegnacja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BtnUżytkownikPielegnacja.Location = new System.Drawing.Point(16, 394);
+            this.BtnUżytkownikPielegnacja.Location = new System.Drawing.Point(12, 408);
             this.BtnUżytkownikPielegnacja.Name = "BtnUżytkownikPielegnacja";
             this.BtnUżytkownikPielegnacja.Size = new System.Drawing.Size(163, 78);
-            this.BtnUżytkownikPielegnacja.TabIndex = 4;
+            this.BtnUżytkownikPielegnacja.TabIndex = 11;
             this.BtnUżytkownikPielegnacja.Text = "Dodaj produkt";
             this.BtnUżytkownikPielegnacja.UseVisualStyleBackColor = false;
             this.BtnUżytkownikPielegnacja.Click += new System.EventHandler(this.BtnUżytkownikPielegnacja_Click);
@@ -137,7 +137,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(144, 145);
+            this.label11.Location = new System.Drawing.Point(144, 154);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 25);
             this.label11.TabIndex = 20;
@@ -148,7 +148,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(166, 182);
+            this.label12.Location = new System.Drawing.Point(166, 191);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 25);
             this.label12.TabIndex = 21;
@@ -159,7 +159,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label13.Location = new System.Drawing.Point(166, 215);
+            this.label13.Location = new System.Drawing.Point(166, 224);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 25);
             this.label13.TabIndex = 22;
@@ -168,18 +168,18 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.Location = new System.Drawing.Point(281, 182);
+            this.textBox11.Location = new System.Drawing.Point(282, 191);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(131, 24);
-            this.textBox11.TabIndex = 28;
+            this.textBox11.TabIndex = 5;
             // 
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox12.Location = new System.Drawing.Point(280, 211);
+            this.textBox12.Location = new System.Drawing.Point(282, 220);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(131, 24);
-            this.textBox12.TabIndex = 29;
+            this.textBox12.TabIndex = 6;
             // 
             // comboBox2
             // 
@@ -192,7 +192,7 @@
             this.comboBox2.Location = new System.Drawing.Point(282, 120);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(131, 26);
-            this.comboBox2.TabIndex = 31;
+            this.comboBox2.TabIndex = 3;
             this.comboBox2.Text = "50";
             // 
             // comboBox3
@@ -202,20 +202,20 @@
             this.comboBox3.Items.AddRange(new object[] {
             "tak",
             "nie"});
-            this.comboBox3.Location = new System.Drawing.Point(282, 147);
+            this.comboBox3.Location = new System.Drawing.Point(282, 156);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(131, 26);
-            this.comboBox3.TabIndex = 32;
+            this.comboBox3.TabIndex = 4;
             this.comboBox3.Text = "nie";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(12, 9);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(11, 9);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(249, 22);
+            this.label14.Size = new System.Drawing.Size(335, 29);
             this.label14.TabIndex = 34;
             this.label14.Text = "Podaj dane nowego produktu:";
             // 
@@ -234,10 +234,10 @@
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(69, 291);
+            this.button4.Location = new System.Drawing.Point(69, 300);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 66);
-            this.button4.TabIndex = 36;
+            this.button4.TabIndex = 8;
             this.button4.Text = "Wczytaj zdjęcie produktu";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -246,7 +246,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::KarolinaDbaj_Kosmetyki.Properties.Resources.pomadka11;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(284, 289);
+            this.pictureBox2.Location = new System.Drawing.Point(284, 298);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(130, 96);
             this.pictureBox2.TabIndex = 37;
@@ -269,7 +269,7 @@
             this.textBox2.Location = new System.Drawing.Point(282, 83);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(131, 24);
-            this.textBox2.TabIndex = 39;
+            this.textBox2.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -277,10 +277,10 @@
             this.comboBox1.Items.AddRange(new object[] {
             "tak",
             "nie"});
-            this.comboBox1.Location = new System.Drawing.Point(281, 248);
+            this.comboBox1.Location = new System.Drawing.Point(282, 257);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 24);
-            this.comboBox1.TabIndex = 41;
+            this.comboBox1.Size = new System.Drawing.Size(131, 24);
+            this.comboBox1.TabIndex = 7;
             this.comboBox1.Text = "nie";
             // 
             // label2
@@ -289,7 +289,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(-6, 247);
+            this.label2.Location = new System.Drawing.Point(-6, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(267, 25);
             this.label2.TabIndex = 40;
@@ -312,7 +312,7 @@
             this.textBox1.Location = new System.Drawing.Point(282, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(131, 22);
-            this.textBox1.TabIndex = 42;
+            this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
@@ -322,7 +322,7 @@
             this.button1.Location = new System.Drawing.Point(862, 518);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 88);
-            this.button1.TabIndex = 44;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Wróć na stronę główną";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -352,14 +352,14 @@
             this.textBox5.Location = new System.Drawing.Point(530, 82);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 51;
+            this.textBox5.TabIndex = 10;
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(530, 45);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(121, 22);
-            this.textBox7.TabIndex = 50;
+            this.textBox7.TabIndex = 9;
             // 
             // ArtykulyPielegnacyjneFormatka
             // 

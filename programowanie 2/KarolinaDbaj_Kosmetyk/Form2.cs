@@ -19,7 +19,7 @@ namespace KarolinaDbaj_Kosmetyk
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ArtykulyPielegnacyjne artykulyPielegnacyjne = new ArtykulyPielegnacyjne(textBox1.Text, textBox2.Text);
+            ArtykulyPielegnacyjne artykulyPielegnacyjne = new ArtykulyPielegnacyjne(textBox2.Text);
             Program.Kosmetyki.Add(artykulyPielegnacyjne);
             Program.Kosmetyki[Program.Kosmetyki.Count - 1].Write(listBox1);
         }

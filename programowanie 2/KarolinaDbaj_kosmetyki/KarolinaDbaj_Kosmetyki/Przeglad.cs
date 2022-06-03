@@ -13,7 +13,7 @@ namespace KarolinaDbaj_Kosmetyki
     public partial class Przeglad : Form
     {
          
-        int currentIndex = -1;
+        public static int currentIndex = -1;
 
         public Przeglad()
         {
@@ -59,21 +59,22 @@ namespace KarolinaDbaj_Kosmetyki
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             currentIndex--;
             listBox1.Items.Clear();
             Form1.kosmetyki[currentIndex].Wypisz(listBox1, pictureBox2);
-          
+            UpdateButtons();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             
             currentIndex++;
-           listBox1.Items.Clear();
-            Form1.kosmetyki[currentIndex].Wypisz(listBox1, pictureBox2);
            
-
+            listBox1.Items.Clear();
+            Form1.kosmetyki[currentIndex].Wypisz(listBox1, pictureBox2);
+            UpdateButtons();
         }
 
         private void button3_Click(object sender, EventArgs e)

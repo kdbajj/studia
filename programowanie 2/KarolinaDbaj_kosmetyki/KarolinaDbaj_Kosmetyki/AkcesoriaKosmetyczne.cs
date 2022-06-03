@@ -14,7 +14,7 @@ namespace KarolinaDbaj_Kosmetyki
     class AkcesoriaKosmetyczne : Kosmetyk
     {
         string nazwa;
-        int waga;
+        public int waga;
         string materiałWykonania;
         bool przyjazneŚrodowisku;
         string doCzegoSłuży;
@@ -50,7 +50,12 @@ namespace KarolinaDbaj_Kosmetyki
 
 
         }
-        public AkcesoriaKosmetyczne(AkcesoriaKosmetyczne o) : base(o)
+        public AkcesoriaKosmetyczne(int waga)
+            
+        {
+            this.waga = waga;
+        }
+            public AkcesoriaKosmetyczne(AkcesoriaKosmetyczne o) : base(o)
         {
             this.nazwa = o.nazwa;
             this.waga = o.waga;
@@ -113,8 +118,39 @@ namespace KarolinaDbaj_Kosmetyki
             if (s == "tak") return true;
             else return false;
         }
-        
-      
+        public static AkcesoriaKosmetyczne operator ==(AkcesoriaKosmetyczne kosmetyk1, AkcesoriaKosmetyczne kosmetyk2)
+        {
+            AkcesoriaKosmetyczne wynik = new AkcesoriaKosmetyczne();
+            TextBox textBox1 = new TextBox();
+            //int ilosc=Convert.ToInt32(textBox1.Text);
+            
+            wynik.waga = (kosmetyk1.waga) + kosmetyk2.waga;
+            return wynik;
+        }
+        public static AkcesoriaKosmetyczne operator !=(AkcesoriaKosmetyczne kosmetyk1, AkcesoriaKosmetyczne kosmetyk2)
+        {
+            ListBox listBox1 = new ListBox();
+            AkcesoriaKosmetyczne wynik = new AkcesoriaKosmetyczne();
+            TextBox textBox1 = new TextBox();
+            
+            wynik.waga = kosmetyk1.waga + kosmetyk2.waga;
+            listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: "+wynik;
+
+            return wynik;
+        }
+        public static AkcesoriaKosmetyczne operator +(AkcesoriaKosmetyczne kosmetyk1, AkcesoriaKosmetyczne kosmetyk2)
+        {
+            AkcesoriaKosmetyczne suma = new AkcesoriaKosmetyczne();
+            ListBox listBox1 = new ListBox();
+            TextBox textBox1 = new TextBox();
+            
+            suma.waga = (kosmetyk1.waga) + kosmetyk2.waga;
+            listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: " + suma;
+            return suma;
+        }
+
+
+
         /* public void ZaładujZdjęcieKosmetyk(PictureBox pictureBox2)
          {
              string fileName = "akcesoria1.jpg";

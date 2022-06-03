@@ -48,7 +48,7 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public Kosmetyk(int numer, string nazwaMarki, string rodzajKosmetyku, int pojemność, float cena, int numerProduktu, string odcień, bool testowanyDermatologicznie, string wykończenie, int trwałośćWMiesiącach, bool wegańskie)
         {
-            liczbaKosmetykow += 1;
+            //liczbaKosmetykow += 1;
             //this.nazwaMarki = "Maybelline";
             this.rodzajKosmetyku = "pomadka";
 
@@ -78,6 +78,8 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public Kosmetyk(float cena, string marka, int numerProduktu, bool testowanyDermatologicznie, Bitmap image)
         {
+            Przeglad.currentIndex++;
+            numer = Przeglad.currentIndex;
             this.cena = cena;
             this.marka = marka;
             this.numerProduktu = numerProduktu;
@@ -153,7 +155,9 @@ namespace KarolinaDbaj_Kosmetyki
 
         public virtual void Wypisz(ListBox lb, PictureBox pb)//metoda wirtualna w klasie bazowej
         {
-            numer += 1;
+            // Przeglad przeglad = new Przeglad();
+            // Przeglad.currentIndex += 1;
+            // numer += 1;
             lb.Items.Add("Numer kosmetyku(kolejno):\t" + numer);
             lb.Items.Add("Nazwa marki:" + marka);
             lb.Items.Add("Cena produktu: " + cena);
@@ -183,10 +187,10 @@ namespace KarolinaDbaj_Kosmetyki
         {
             MessageBox.Show("Likwidacja obiektu klasy Kosmetyk.");
         }
-        public float ObliczZniżkę(TextBox tb,Label lb)
+        public float ObliczZniżkę(TextBox tb, Label lb)
         {
             //var textBoxZniżka = new TextBox();
-           // var lblZniżka = new Label();
+            // var lblZniżka = new Label();
             tb.Text = "" + lb.Text;
             float cenaKońcowa;
 
@@ -244,7 +248,7 @@ namespace KarolinaDbaj_Kosmetyki
             return 0;
         }
 
+
+
     }
-
-
 }

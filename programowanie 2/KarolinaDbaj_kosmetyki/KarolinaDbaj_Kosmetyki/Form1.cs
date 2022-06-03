@@ -16,7 +16,7 @@ namespace KarolinaDbaj_Kosmetyki
         public Form1()
         {
             InitializeComponent();
-            lblZniżka.Text = "Promocja! \n Kup jeden dostań 2 gratis!\n Działa nawet przy zakupie kilku sztuk!\n Wpisz ile produktów chcesz kupić \n i oblicz ile wynosi całkowity koszt:";
+            //lblZniżka.Text = "Promocja! \n Kup jeden dostań 2 gratis!\n Działa nawet przy zakupie kilku sztuk!\n Wpisz ile produktów chcesz kupić \n i oblicz ile wynosi całkowity koszt:";
         }
         public static int numer = 0;
         Przeglad przeglad1 = new Przeglad();
@@ -88,7 +88,7 @@ namespace KarolinaDbaj_Kosmetyki
             //var kosmetyk = new Kosmetyk();
            // kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text));
            // lblZniżka.Text = "Cena za taką ilość produktów \n z wliczoną promocją to:" + kosmetyk.ObliczZniżkę(Convert.ToInt32(textBoxZniżka.Text)) + " zł";
-            textBoxZniżka.Text = String.Empty;//czyścimy pole do wprowadzania danych, aby nie wyskoczył błąd
+           // textBoxZniżka.Text = String.Empty;//czyścimy pole do wprowadzania danych, aby nie wyskoczył błąd
               
         }
 
@@ -118,6 +118,15 @@ namespace KarolinaDbaj_Kosmetyki
             przeglad.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FunkcjeOperatorowe funkcje = new FunkcjeOperatorowe();
+            funkcje.Show();
+            this.Hide();
+        }
+       
     }
 }
+
 

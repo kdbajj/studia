@@ -63,10 +63,10 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(253)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(561, 126);
+            this.button1.Location = new System.Drawing.Point(557, 148);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 65);
-            this.button1.TabIndex = 4;
+            this.button1.Size = new System.Drawing.Size(202, 76);
+            this.button1.TabIndex = 1;
             this.button1.Text = "Uzupełnij";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -81,7 +81,7 @@
             this.lblAkcesoria.Name = "lblAkcesoria";
             this.lblAkcesoria.ScrollAlwaysVisible = true;
             this.lblAkcesoria.Size = new System.Drawing.Size(431, 208);
-            this.lblAkcesoria.TabIndex = 5;
+            this.lblAkcesoria.TabIndex = 12;
             // 
             // button3
             // 
@@ -91,7 +91,7 @@
             this.button3.Location = new System.Drawing.Point(45, 390);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 66);
-            this.button3.TabIndex = 8;
+            this.button3.TabIndex = 11;
             this.button3.Text = "Dodaj produkt";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -101,28 +101,28 @@
             this.textBox1.Location = new System.Drawing.Point(291, 86);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.TabIndex = 2;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(291, 165);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 11;
+            this.textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(291, 202);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 12;
+            this.textBox4.TabIndex = 5;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(674, 80);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(121, 22);
-            this.textBox6.TabIndex = 14;
+            this.textBox6.TabIndex = 10;
             // 
             // label1
             // 
@@ -193,7 +193,7 @@
             this.comboBox1.Location = new System.Drawing.Point(291, 124);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 21;
+            this.comboBox1.TabIndex = 3;
             this.comboBox1.Text = "nie";
             // 
             // comboBox3
@@ -205,7 +205,7 @@
             this.comboBox3.Location = new System.Drawing.Point(674, 43);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 24;
+            this.comboBox3.TabIndex = 9;
             this.comboBox3.Text = "nie";
             // 
             // label7
@@ -244,7 +244,7 @@
             this.textBox2.Location = new System.Drawing.Point(291, 43);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 31;
+            this.textBox2.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -263,7 +263,7 @@
             this.button4.Location = new System.Drawing.Point(45, 318);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 66);
-            this.button4.TabIndex = 32;
+            this.button4.TabIndex = 8;
             this.button4.Text = "Wczytaj zdjęcie produktu";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -276,7 +276,7 @@
             this.button2.Location = new System.Drawing.Point(828, 505);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 88);
-            this.button2.TabIndex = 45;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Wróć na stronę główną";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_3);
@@ -306,14 +306,14 @@
             this.textBox5.Location = new System.Drawing.Point(291, 277);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 47;
+            this.textBox5.TabIndex = 7;
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(291, 240);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(121, 22);
-            this.textBox7.TabIndex = 46;
+            this.textBox7.TabIndex = 6;
             // 
             // AkcesoriaKosmetyczneFormatka
             // 

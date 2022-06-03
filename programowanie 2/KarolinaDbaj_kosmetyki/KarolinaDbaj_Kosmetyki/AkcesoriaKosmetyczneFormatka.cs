@@ -50,8 +50,7 @@ namespace KarolinaDbaj_Kosmetyki
         }
         private void button3_Click(object sender, EventArgs e)
         {
-
-
+           
             AkcesoriaKosmetyczne akcesoria = new AkcesoriaKosmetyczne(Convert.ToInt32(textBox1.Text), textBox2.Text, AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox1.SelectedItem.ToString()), Convert.ToInt32(textBox3.Text), textBox4.Text,textBox7.Text, GetInputValidator.ConvertToFloat(textBox5.Text), AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(comboBox3.SelectedItem.ToString()), textBox6.Text, (Bitmap)pictureBox2.Image);
             labelNowyProdukt.Text = "Nowy produkt:";
             Form1.kosmetyki.Add(akcesoria); //dodanie obiektu do listy
@@ -114,5 +113,6 @@ namespace KarolinaDbaj_Kosmetyki
             formatkaGłówna.Show();
             this.Hide();
         }
+        
     }
 }
