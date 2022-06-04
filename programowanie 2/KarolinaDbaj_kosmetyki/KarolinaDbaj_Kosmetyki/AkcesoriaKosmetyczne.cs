@@ -20,6 +20,7 @@ namespace KarolinaDbaj_Kosmetyki
         string doCzegoSłuży;
         ArrayList odcienieSzczotki = new ArrayList();
         Bitmap image2;
+        private readonly string _filePath;
 
         public AkcesoriaKosmetyczne() : base()
         {
@@ -32,13 +33,13 @@ namespace KarolinaDbaj_Kosmetyki
             this.odcienieSzczotki.Add("różowy");
             this.odcienieSzczotki.Add("fioletowy");
         }
-        public AkcesoriaKosmetyczne(int numerProduktu,string nazwa,
+        public AkcesoriaKosmetyczne(int numerProduktu, string nazwa,
             bool testowanyDermatologicznie, int waga, string materiałWykonania,
-            string marka,float cena, bool przyjazneŚrodowisku, string doCzegoSłuży,
-            Bitmap image) 
-            : base(cena, marka,numerProduktu, testowanyDermatologicznie,image)
+            string marka, float cena, bool przyjazneŚrodowisku, string doCzegoSłuży,
+            Bitmap image)
+            : base(cena, marka, numerProduktu, testowanyDermatologicznie, image)
         {
-            
+
             this.nazwa = nazwa;
             this.waga = waga;
             this.materiałWykonania = materiałWykonania;
@@ -51,11 +52,19 @@ namespace KarolinaDbaj_Kosmetyki
 
         }
         public AkcesoriaKosmetyczne(int waga)
-            
+
         {
             this.waga = waga;
+
         }
-            public AkcesoriaKosmetyczne(AkcesoriaKosmetyczne o) : base(o)
+        public AkcesoriaKosmetyczne(string filePath)
+
+        {
+            this._filePath = filePath;
+
+        }
+
+        public AkcesoriaKosmetyczne(AkcesoriaKosmetyczne o) : base(o)
         {
             this.nazwa = o.nazwa;
             this.waga = o.waga;
@@ -80,13 +89,13 @@ namespace KarolinaDbaj_Kosmetyki
             lb.Items.Add(odcienieSzczotki[2]);
             //NowyProdukt();
         }
-        public override void Wypisz(ListBox lb,PictureBox pb)
+        public override void Wypisz(ListBox lb, PictureBox pb)
         {
-            base.Wypisz(lb,pb); //wywołanie metody Write Z KLASY BAZOWEJ 
+            base.Wypisz(lb, pb); //wywołanie metody Write Z KLASY BAZOWEJ 
             lb.Items.Add("Waga produktu w gramach: " + waga);
             lb.Items.Add("Nazwa produktu: " + nazwa);
             lb.Items.Add("Materiał wykonania: " + materiałWykonania);
-             lb.Items.Add("Czy produkt jest przyjazny środowisku: " + przyjazneŚrodowisku+PrzyjazneŚrodowisku());
+            lb.Items.Add("Czy produkt jest przyjazny środowisku: " + przyjazneŚrodowisku + PrzyjazneŚrodowisku());
             lb.Items.Add("Do czego służy: " + doCzegoSłuży);
             lb.Items.Add("Szczotka dostępna w takich kolorach:");
             lb.Items.Add(odcienieSzczotki[0]);
@@ -123,7 +132,7 @@ namespace KarolinaDbaj_Kosmetyki
             AkcesoriaKosmetyczne wynik = new AkcesoriaKosmetyczne();
             TextBox textBox1 = new TextBox();
             //int ilosc=Convert.ToInt32(textBox1.Text);
-            
+
             wynik.waga = (kosmetyk1.waga) + kosmetyk2.waga;
             return wynik;
         }
@@ -132,9 +141,9 @@ namespace KarolinaDbaj_Kosmetyki
             ListBox listBox1 = new ListBox();
             AkcesoriaKosmetyczne wynik = new AkcesoriaKosmetyczne();
             TextBox textBox1 = new TextBox();
-            
+
             wynik.waga = kosmetyk1.waga + kosmetyk2.waga;
-            listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: "+wynik;
+            listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: " + wynik;
 
             return wynik;
         }
@@ -143,13 +152,44 @@ namespace KarolinaDbaj_Kosmetyki
             AkcesoriaKosmetyczne suma = new AkcesoriaKosmetyczne();
             ListBox listBox1 = new ListBox();
             TextBox textBox1 = new TextBox();
-            
+
             suma.waga = (kosmetyk1.waga) + kosmetyk2.waga;
             listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: " + suma;
             return suma;
         }
+        public override void WriteToFile(StreamWriter sw)
+        {
+            sw.WriteLine("K"); //pierwsza linia (pomocnicza) do oznaczenia, że dalej
+                               //zapisane są pola obiektu klasy Student
+            sw.WriteLine(nazwa);
+            sw.WriteLine(numerProduktu);
+            sw.WriteLine(testowanyDermatologicznie);
+            sw.WriteLine(waga);
+            sw.WriteLine(materiałWykonania);
+            sw.WriteLine(marka);
+            sw.WriteLine(cena);
+            sw.WriteLine(przyjazneŚrodowisku);
+            sw.WriteLine(doCzegoSłuży);
+
+        }
+        //Definicja metody wirtualnej wczytującej wartości pól obiektu klasy Student z pliku tekstowego
+        public override void ReadFromFile(StreamReader sr)
+        {
+            nazwa = sr.ReadLine();
+            numerProduktu = Convert.ToInt32(sr.ReadLine());
+            testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+            waga = Convert.ToInt32(sr.ReadLine());
+            materiałWykonania = sr.ReadLine();
+            marka = sr.ReadLine();
+            cena = GetInputValidator.ConvertToFloat(sr.ReadLine());
+            przyjazneŚrodowisku = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+            doCzegoSłuży = sr.ReadLine();
 
 
+
+        }
+       
+    }
 
         /* public void ZaładujZdjęcieKosmetyk(PictureBox pictureBox2)
          {
@@ -254,4 +294,4 @@ namespace KarolinaDbaj_Kosmetyki
         //stworzenie metody odpowiadającej za sprawdzenie, czy produkt jest ekologiczny
 
     }
-}
+

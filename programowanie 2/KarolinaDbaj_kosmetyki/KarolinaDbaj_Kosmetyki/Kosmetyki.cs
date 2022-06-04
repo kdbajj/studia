@@ -15,16 +15,16 @@ namespace KarolinaDbaj_Kosmetyki
     public abstract class Kosmetyk
     {
         private int numer;
-        string marka;
+        public string marka;
         string rodzajKosmetyku;
         public float cena;
         public int kodProduktu;
-        bool testowanyDermatologicznie;
+        public bool testowanyDermatologicznie;
         string wykończenie;
         int trwałośćWMiesiącach;
         private DateTime dataZakupu;
         static int liczbaKosmetykow = -1;
-        private int numerProduktu;
+        public int numerProduktu;
         //private string odcień;
         protected Bitmap image;
 
@@ -247,8 +247,6 @@ namespace KarolinaDbaj_Kosmetyki
             }
             return 0;
         }
-
-
 
     }
 }

@@ -41,18 +41,19 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(39, 75);
+            this.listBox1.ItemHeight = 25;
+            this.listBox1.Location = new System.Drawing.Point(39, 84);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(423, 244);
+            this.listBox1.Size = new System.Drawing.Size(423, 254);
             this.listBox1.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(234)))), ((int)(((byte)(255)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(529, 241);
+            this.button2.Location = new System.Drawing.Point(613, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 66);
             this.button2.TabIndex = 2;
@@ -62,7 +63,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(503, 75);
+            this.textBox1.Location = new System.Drawing.Point(577, 110);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(238, 22);
             this.textBox1.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(498, 35);
+            this.label2.Location = new System.Drawing.Point(572, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 25);
             this.label2.TabIndex = 5;
@@ -91,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(498, 109);
+            this.label3.Location = new System.Drawing.Point(572, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(214, 25);
             this.label3.TabIndex = 6;
@@ -99,7 +100,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(503, 146);
+            this.textBox2.Location = new System.Drawing.Point(577, 181);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(238, 22);
             this.textBox2.TabIndex = 7;
@@ -109,7 +110,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(630, 350);
+            this.button5.Location = new System.Drawing.Point(805, 488);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(158, 88);
             this.button5.TabIndex = 46;
@@ -121,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(975, 588);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -133,6 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FunkcjeOperatorowe";
             this.Text = "Funkcje operatorowe";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FunkcjeOperatorowe_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

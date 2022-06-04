@@ -43,5 +43,10 @@ namespace KarolinaDbaj_Kosmetyki
             formatkaGłówna.Show();
             this.Hide();
         }
+
+        private void FunkcjeOperatorowe_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

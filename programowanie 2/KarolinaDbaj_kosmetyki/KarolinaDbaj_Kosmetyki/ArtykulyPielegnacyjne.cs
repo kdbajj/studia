@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,17 +13,17 @@ namespace KarolinaDbaj_Kosmetyki
 
     class ArtykulyPielegnacyjne : Kosmetyk
     {
-       
+
         string nazwa;
         int pojemność;
         string dlaKogo;
         bool wegańskie;
-        string działanie; 
+        string działanie;
         float cena;
 
         public ArtykulyPielegnacyjne() : base()
         {
-            
+
             nazwa = "Żel myjący do twarzy";
             pojemność = 100;
             dlaKogo = "Dla wszystkich typów cery.";
@@ -42,9 +44,9 @@ namespace KarolinaDbaj_Kosmetyki
             this.działanie = działanie;
         }
         */
-        public ArtykulyPielegnacyjne(int numerProduktu, string nazwa, int pojemność,float cena,
+        public ArtykulyPielegnacyjne(int numerProduktu, string nazwa, int pojemność, float cena,
             bool wegańskie, string dlaKogo, string działanie, Bitmap image,
-            bool testowanyDermatologicznie,string marka)
+            bool testowanyDermatologicznie, string marka)
             : base(cena, marka, numerProduktu, testowanyDermatologicznie, image)
         {
             //this.numer = numer;
@@ -55,7 +57,7 @@ namespace KarolinaDbaj_Kosmetyki
             this.wegańskie = wegańskie;
             this.działanie = działanie;
         }
-        public ArtykulyPielegnacyjne(ArtykulyPielegnacyjne o):base(o)
+        public ArtykulyPielegnacyjne(ArtykulyPielegnacyjne o) : base(o)
         {
             this.nazwa = o.nazwa;
             this.pojemność = o.pojemność;
@@ -67,7 +69,7 @@ namespace KarolinaDbaj_Kosmetyki
         {
             base.Wypisz(lblPielegnacja); //wywołanie metody Write Z KLASY BAZOWEJ (Person)
             lblPielegnacja.Items.Add("Nazwa: " + nazwa);
-            lblPielegnacja.Items.Add("Pojemność: " + pojemność+"g");
+            lblPielegnacja.Items.Add("Pojemność: " + pojemność + "g");
             lblPielegnacja.Items.Add("Dla kogo: " + dlaKogo);
             lblPielegnacja.Items.Add("Wegański produkt: " + wegańskie);
             lblPielegnacja.Items.Add("Działanie: " + działanie);
@@ -75,7 +77,7 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public override void Wypisz(ListBox lb, PictureBox pb)
         {
-            
+
             base.Wypisz(lb, pb); //wywołanie metody Write Z KLASY BAZOWEJ 
             base.Wypisz(lb); //wywołanie metody Write Z KLASY BAZOWEJ (Person)
             lb.Items.Add("Nazwa: " + nazwa);
@@ -87,11 +89,11 @@ namespace KarolinaDbaj_Kosmetyki
             //NowyProdukt();
 
         }
-        public void ObliczanieRabatu(Label lb,ComboBox cb)
+        public void ObliczanieRabatu(Label lb, ComboBox cb)
         {
             //Label lb = new Label();
             //ComboBox cb = new ComboBox();
-             cena = GetInputValidator.ConvertToFloat(cb.Text);
+            cena = GetInputValidator.ConvertToFloat(cb.Text);
             float rabat;
             float cenaPoRabacie;
             if (GetInputValidator.ConvertToFloat(cb.Text) != 50)
@@ -106,17 +108,56 @@ namespace KarolinaDbaj_Kosmetyki
                 cenaPoRabacie = cena - rabat;
                 lb.Text = "Produkt jest w pojemności 50g,\n więc rabat wynosi 20%, \n  cena po zniżce to:" + zaokraglij_2(cenaPoRabacie) + " zł!";
             }
-                
-        }
 
+        }
         public float zaokraglij_2(float cenaPoRabacie)
         {
-           
+
             float wynik = cenaPoRabacie * 100;
             int a = (int)wynik;
             wynik = (float)a / 100;
             return wynik;
         }
+        public override void WriteToFile(StreamWriter sw)
+        {
+            sw.WriteLine("A"); //pierwsza linia (pomocnicza) do oznaczenia, że dalej
+                               //zapisane są pola obiektu klasy Artykuły Pielegnacyjne
+            sw.WriteLine(numerProduktu);
+            sw.WriteLine(nazwa);
+            sw.WriteLine(pojemność);
+            sw.WriteLine(cena);
+            sw.WriteLine(wegańskie);
+            sw.WriteLine(dlaKogo);
+            sw.WriteLine(działanie);
+            sw.WriteLine(testowanyDermatologicznie);
+            sw.WriteLine(marka);
+
+        }
+
+        //Definicja metody wirtualnej wczytującej wartości pól obiektu klasy Student z pliku tekstowego
+        public override void ReadFromFile(StreamReader sr)
+        {
+            numerProduktu = Convert.ToInt32(sr.ReadLine());
+            nazwa = sr.ReadLine();
+            pojemność = Convert.ToInt32(sr.ReadLine());
+            cena = GetInputValidator.ConvertToFloat(sr.ReadLine());
+            wegańskie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+            dlaKogo = sr.ReadLine();
+            działanie = sr.ReadLine();
+            testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+            marka = sr.ReadLine();
+        }
+        //Definicja metody wirtualnej WritePhotoToFile
+        //public override void WritePhotoToFile(string fullFileName)
+        //{
+        //image.Save(fullFileName, ImageFormat.Bmp);
+        //}
+        //Definicja metody wirtualnej ReadPhotoFromFile
+        //public override void ReadPhotoFromFile(string fullFileName)
+        //{
+        //  image = (Bitmap)Image.FromFile(fullFileName);
+        //}
+
 
     }
 }
