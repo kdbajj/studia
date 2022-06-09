@@ -102,6 +102,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 22);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox3
             // 
@@ -109,6 +110,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 22);
             this.textBox3.TabIndex = 4;
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox4
             // 
@@ -116,6 +118,8 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 22);
             this.textBox4.TabIndex = 5;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // textBox6
             // 
@@ -123,6 +127,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(121, 22);
             this.textBox6.TabIndex = 10;
+            this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
             // 
             // label1
             // 
@@ -195,6 +200,7 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Text = "nie";
+            this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
             // 
             // comboBox3
             // 
@@ -207,6 +213,7 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 9;
             this.comboBox3.Text = "nie";
+            this.comboBox3.Leave += new System.EventHandler(this.comboBox3_Leave);
             // 
             // label7
             // 
@@ -245,6 +252,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // pictureBox2
             // 
@@ -307,6 +315,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 22);
             this.textBox5.TabIndex = 7;
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox7
             // 
@@ -314,6 +323,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(121, 22);
             this.textBox7.TabIndex = 6;
+            this.textBox7.Leave += new System.EventHandler(this.textBox7_Leave);
             // 
             // AkcesoriaKosmetyczneFormatka
             // 

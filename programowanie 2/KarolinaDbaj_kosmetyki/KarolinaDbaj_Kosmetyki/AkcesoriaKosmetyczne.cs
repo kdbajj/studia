@@ -57,6 +57,12 @@ namespace KarolinaDbaj_Kosmetyki
             this.waga = waga;
 
         }
+        public AkcesoriaKosmetyczne(float cena)
+
+        {
+            this.cena = cena;
+
+        }
         public AkcesoriaKosmetyczne(string filePath)
 
         {
@@ -104,15 +110,15 @@ namespace KarolinaDbaj_Kosmetyki
             //Uczulenie();
             NowyProdukt();
         }
-        public override void WritePhotoToFile(string fullFileName)
-        {
-            image.Save(fullFileName, ImageFormat.Bmp);
-        }
+        //public override void WritePhotoToFile(string fullFileName)
+        // {
+        //    image.Save(fullFileName, ImageFormat.Bmp);
+        //  }
         //Definicja metody wirtualnej ReadPhotoFromFile
-        public override void ReadPhotoFromFile(string fullFileName)
-        {
-            image = (Bitmap)Image.FromFile(fullFileName);
-        }
+        //  public override void ReadPhotoFromFile(string fullFileName)
+        //  {
+        //     image = (Bitmap)Image.FromFile(fullFileName);
+        //}
 
         private int PrzyjazneŚrodowisku()
         {
@@ -140,7 +146,7 @@ namespace KarolinaDbaj_Kosmetyki
         {
             ListBox listBox1 = new ListBox();
             AkcesoriaKosmetyczne wynik = new AkcesoriaKosmetyczne();
-            TextBox textBox1 = new TextBox();
+            //TextBox textBox1 = new TextBox();
 
             wynik.waga = kosmetyk1.waga + kosmetyk2.waga;
             listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: " + wynik;
@@ -150,46 +156,81 @@ namespace KarolinaDbaj_Kosmetyki
         public static AkcesoriaKosmetyczne operator +(AkcesoriaKosmetyczne kosmetyk1, AkcesoriaKosmetyczne kosmetyk2)
         {
             AkcesoriaKosmetyczne suma = new AkcesoriaKosmetyczne();
-            ListBox listBox1 = new ListBox();
-            TextBox textBox1 = new TextBox();
+            // ListBox listBox1 = new ListBox();
+            //TextBox textBox1 = new TextBox();
 
-            suma.waga = (kosmetyk1.waga) + kosmetyk2.waga;
-            listBox1.Text = "Ceny produktów są różne, kwota do zapłaty wynosi: " + suma;
+            suma.cena = kosmetyk1.cena + kosmetyk2.cena;
+            // listBox1.Text = "Kwota do zapłaty wynosi: " + suma.cena;
             return suma;
+
         }
-        public override void WriteToFile(StreamWriter sw)
+
+        public override void WriteToFile(StreamWriter streamWriter)
         {
-            sw.WriteLine("K"); //pierwsza linia (pomocnicza) do oznaczenia, że dalej
-                               //zapisane są pola obiektu klasy Student
-            sw.WriteLine(nazwa);
-            sw.WriteLine(numerProduktu);
-            sw.WriteLine(testowanyDermatologicznie);
-            sw.WriteLine(waga);
-            sw.WriteLine(materiałWykonania);
-            sw.WriteLine(marka);
-            sw.WriteLine(cena);
-            sw.WriteLine(przyjazneŚrodowisku);
-            sw.WriteLine(doCzegoSłuży);
+            //base.WriteToFile(streamWriter);
 
+            streamWriter.WriteLine("--------------------");
+            streamWriter.WriteLine("Akcesoria Kosmetyczne");
+
+            base.WriteToFile(streamWriter);
+
+            streamWriter.WriteLine(nazwa);
+            streamWriter.WriteLine(waga);
+            streamWriter.WriteLine(materiałWykonania);
+            streamWriter.WriteLine(przyjazneŚrodowisku);
+            streamWriter.WriteLine(doCzegoSłuży);
+            streamWriter.WriteLine("");
         }
-        //Definicja metody wirtualnej wczytującej wartości pól obiektu klasy Student z pliku tekstowego
-        public override void ReadFromFile(StreamReader sr)
+
+        public override void ReadFromFile(List<string> stringList)
         {
-            nazwa = sr.ReadLine();
-            numerProduktu = Convert.ToInt32(sr.ReadLine());
-            testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
-            waga = Convert.ToInt32(sr.ReadLine());
-            materiałWykonania = sr.ReadLine();
-            marka = sr.ReadLine();
-            cena = GetInputValidator.ConvertToFloat(sr.ReadLine());
-            przyjazneŚrodowisku = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
-            doCzegoSłuży = sr.ReadLine();
+            try
+            {
+                base.ReadFromFile(stringList);
+                nazwa = stringList[4];
+                waga = Convert.ToInt32(stringList[5]);
+                materiałWykonania = stringList[6];
+                przyjazneŚrodowisku = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(stringList[7]);
+                doCzegoSłuży = stringList[8];
+
+            }
+            catch (System.ArgumentOutOfRangeException e)
+            {
+                MessageBox.Show($"Błąd przy wczytywaniu pliku!\n\n Kod błędu {e}");
+            }
+            /* public override void WriteToFile(StreamWriter sw)
+             {
+                 sw.WriteLine("K"); //pierwsza linia (pomocnicza) do oznaczenia, że dalej
+                                    //zapisane są pola obiektu klasy Student
+                 sw.WriteLine(nazwa);
+                 sw.WriteLine(numerProduktu);
+                 sw.WriteLine(testowanyDermatologicznie);
+                 sw.WriteLine(waga);
+                 sw.WriteLine(materiałWykonania);
+                 sw.WriteLine(marka);
+                 sw.WriteLine(cena);
+                 sw.WriteLine(przyjazneŚrodowisku);
+                 sw.WriteLine(doCzegoSłuży);
+
+             }
+             //Definicja metody wirtualnej wczytującej wartości pól obiektu klasy Student z pliku tekstowego
+             public override void ReadFromFile(StreamReader sr)
+             {
+                 nazwa = sr.ReadLine();
+                 numerProduktu = Convert.ToInt32(sr.ReadLine());
+                 testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+                 waga = Convert.ToInt32(sr.ReadLine());
+                 materiałWykonania = sr.ReadLine();
+                 marka = sr.ReadLine();
+                 cena = GetInputValidator.ConvertToFloat(sr.ReadLine());
+                 przyjazneŚrodowisku = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+                 doCzegoSłuży = sr.ReadLine();
 
 
 
+             }
+            */
         }
-       
-    }
 
         /* public void ZaładujZdjęcieKosmetyk(PictureBox pictureBox2)
          {
@@ -294,4 +335,5 @@ namespace KarolinaDbaj_Kosmetyki
         //stworzenie metody odpowiadającej za sprawdzenie, czy produkt jest ekologiczny
 
     }
+}
 

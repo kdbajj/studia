@@ -17,7 +17,7 @@ namespace KarolinaDbaj_Kosmetyki
             InitializeComponent();
             lblRabat.Text = "Promocja! Jeśli kupisz produkt o pojemności 50 g \n otrzymasz rabat!";
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "1234";
@@ -51,7 +51,7 @@ namespace KarolinaDbaj_Kosmetyki
             labelNowyProdukt.Text = "";
             labelNowyProdukt.Text = "NOWY PRODUKT ZOSTAŁ DODANY DO LISTY";
             Form1.kosmetyki[Form1.kosmetyki.Count - 1].Wypisz(lblPielegnacja, pictureBox2);
-            
+
         }
 
         private void btnkPielegnacja_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace KarolinaDbaj_Kosmetyki
         {
             var artykuł = new ArtykulyPielegnacyjne();
             // artykuł.ObliczanieRabatu(lblRabat);
-           artykuł.ObliczanieRabatu(lblRabat, comboBox2);
+            artykuł.ObliczanieRabatu(lblRabat, comboBox2);
 
         }
         private void ArtykulyPielegnacyjneFormatka_Load(object sender, EventArgs e)
@@ -84,7 +84,114 @@ namespace KarolinaDbaj_Kosmetyki
             Form1 formatkaGłówna = new Form1();
             formatkaGłówna.Show();
             this.Hide();
-            
+
+        }
+
+        private void textBox2_Leave_1(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void comboBox2_Leave_1(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "")
+                MessageBox.Show("Nie zaznaczyłeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void comboBox3_Leave_1(object sender, EventArgs e)
+        {
+            if (comboBox3.Text == "")
+                MessageBox.Show("Nie zaznaczyłeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void textBox11_Leave_1(object sender, EventArgs e)
+        {
+            if (textBox11.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void textBox12_Leave_1(object sender, EventArgs e)
+        {
+            if (textBox12.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void comboBox1_Leave_1(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+                MessageBox.Show("Nie zaznaczyłeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void textBox7_Leave_1(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void textBox5_Leave_1(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void textBox1_Leave_1(object sender, EventArgs e)
+        {
+
+           // if (textBox1.Text == "")
+             //   MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // if (textBox1.MouseClick==System.Windows.Forms.MouseButtons.Right) { MessageBox.Show("Right click"); }
+
+        }
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void textBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Right)
+           {
+                textBox1.Text = "674";
+            }      
+        }
+
+        private void textBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            //if (e.Button == MouseButtons.Right)
+            //{
+            //    textBox1.Text = "Krem";
+            //}
+        }
+
+        private void textBox11_MouseUp(object sender, MouseEventArgs e)
+        {
+            //if (e.Button == MouseButtons.Right)
+           // {
+           //     textBox1.Text = "Cera sucha";
+           // }
+        }
+
+        private void textBox12_MouseUp(object sender, MouseEventArgs e)
+        {
+            //if (e.Button == MouseButtons.Right)
+           // {
+            //    textBox1.Text = "Nawilżające";
+            ///}
+        }
+
+        private void textBox7_MouseUp(object sender, MouseEventArgs e)
+        {
+           // if (e.Button == MouseButtons.Right)
+           // {
+           //     textBox1.Text = "The ordinary";
+           // }
+        }
+
+        private void textBox5_MouseUp(object sender, MouseEventArgs e)
+        {
+            //if (e.Button == MouseButtons.Right)
+           // {
+           //     textBox1.Text = "50.99";
+           // }
         }
     }
 }

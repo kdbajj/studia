@@ -113,6 +113,71 @@ namespace KarolinaDbaj_Kosmetyki
             formatkaGłówna.Show();
             this.Hide();
         }
-        
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            //if (textBox2.Text == "")
+              //  MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void comboBox1_Leave(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+                MessageBox.Show("Nie zaznaczyłeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+           if (textBox3.Text == "")
+            MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void comboBox3_Leave(object sender, EventArgs e)
+        {
+            if (comboBox3.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (textBox6.Text == "")
+                MessageBox.Show("Nie wpisałeś/aś żadnej wartości!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
     }
 }

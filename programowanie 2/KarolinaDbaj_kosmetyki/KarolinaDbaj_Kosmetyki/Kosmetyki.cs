@@ -17,7 +17,7 @@ namespace KarolinaDbaj_Kosmetyki
         private int numer;
         public string marka;
         string rodzajKosmetyku;
-        public float cena;
+        public  float cena;
         public int kodProduktu;
         public bool testowanyDermatologicznie;
         string wykończenie;
@@ -127,9 +127,9 @@ namespace KarolinaDbaj_Kosmetyki
             return lata;
         }
 
-        public virtual void WriteToFile(StreamWriter sw)
-        {
-        }
+        //public virtual void WriteToFile(StreamWriter sw)
+        //{
+        //}
         //Definicja metody wirtualnej wczytującej wartości pól z pliku tekstowego
         //Ciało funkcji jest zdefiniowane w odpowiednich funkcjach klas pochodnych
         public virtual void ReadFromFile(StreamReader sr)
@@ -173,9 +173,9 @@ namespace KarolinaDbaj_Kosmetyki
             pb.Image = image;
 
         }
-        public virtual void WritePhotoToFile(string fullFileName)
-        {
-        }
+        //public virtual void WritePhotoToFile(string fullFileName)
+        //{
+        //}
         //Definicja metody wirtualnej ReadPhotoFromFile
         //Ciało funkcji jest zdefiniowane w odpowiednich funkcjach klas pochodnych
         public virtual void ReadPhotoFromFile(string fullFileName)
@@ -247,6 +247,74 @@ namespace KarolinaDbaj_Kosmetyki
             }
             return 0;
         }
+        private void SaveImageToFile()
+        {
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = @"JPG(*.JPG)|*.jpg";
 
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    image.Save(saveFileDialog.FileName);
+            }
+            catch (System.Runtime.InteropServices.ExternalException e)
+            {
+                MessageBox.Show($"Bład podczas zapisu zdjęcia! Kod błędu: {e}");
+            }
+            catch(System.NullReferenceException e)
+            {
+                MessageBox.Show($"Bład podczas zapisu zdjęcia! Kod błędu: {e}");
+            }
+        }
+        public virtual void WriteToFile(StreamWriter streamWriter)
+        {
+            SaveImageToFile();
+
+            streamWriter.WriteLine(marka);
+            streamWriter.WriteLine(cena);
+            streamWriter.WriteLine(testowanyDermatologicznie);
+            
+        }
+        public void LoadImage(PictureBox pb)
+        {
+            pb.Image = image;
+            //IsCorrect = true;
+        }
+
+        public static void LoadImageDialog(PictureBox pb)
+        {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap f = new Bitmap(open.OpenFile());
+                    pb.Image = f;
+                }
+            }
+            catch (System.ArgumentException e)
+            {
+                MessageBox.Show($"Możliwe wczytywanie jest tylko zdjęć!\n\n Kod błędu: {e}");
+            }
+        }
+
+        public virtual void ReadFromFile(List<string> stringList)
+        {
+
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = @"JPG(*.JPG)|*.jpg|PNG|*.png";
+            open.Title = "Wczytaj zdjęcie";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap f = new Bitmap(open.OpenFile());
+                image = f;
+            }
+
+            marka = stringList[1];
+            cena = GetInputValidator.ConvertToFloat(stringList[2]);
+            testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(stringList[3]);
+         
+        }
     }
 }

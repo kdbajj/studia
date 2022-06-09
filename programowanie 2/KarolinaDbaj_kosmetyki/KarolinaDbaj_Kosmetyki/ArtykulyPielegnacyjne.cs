@@ -118,48 +118,83 @@ namespace KarolinaDbaj_Kosmetyki
             wynik = (float)a / 100;
             return wynik;
         }
-        public override void WriteToFile(StreamWriter sw)
-        {
-            sw.WriteLine("A"); //pierwsza linia (pomocnicza) do oznaczenia, że dalej
-                               //zapisane są pola obiektu klasy Artykuły Pielegnacyjne
-            sw.WriteLine(numerProduktu);
-            sw.WriteLine(nazwa);
-            sw.WriteLine(pojemność);
-            sw.WriteLine(cena);
-            sw.WriteLine(wegańskie);
-            sw.WriteLine(dlaKogo);
-            sw.WriteLine(działanie);
-            sw.WriteLine(testowanyDermatologicznie);
-            sw.WriteLine(marka);
+        /* public override void WriteToFile(StreamWriter sw)
+         {
+             sw.WriteLine("A"); //pierwsza linia (pomocnicza) do oznaczenia, że dalej
+                                //zapisane są pola obiektu klasy Artykuły Pielegnacyjne
+             sw.WriteLine(numerProduktu);
+             sw.WriteLine(nazwa);
+             sw.WriteLine(pojemność);
+             sw.WriteLine(cena);
+             sw.WriteLine(wegańskie);
+             sw.WriteLine(dlaKogo);
+             sw.WriteLine(działanie);
+             sw.WriteLine(testowanyDermatologicznie);
+             sw.WriteLine(marka);
 
+         }
+
+         //Definicja metody wirtualnej wczytującej wartości pól obiektu klasy Student z pliku tekstowego
+         public override void ReadFromFile(StreamReader sr)
+         {
+            // numerProduktu = Convert.ToInt32(sr.ReadLine());//
+             nazwa = sr.ReadLine();
+             pojemność = Convert.ToInt32(sr.ReadLine());
+           //  cena = GetInputValidator.ConvertToFloat(sr.ReadLine());//
+             wegańskie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+             dlaKogo = sr.ReadLine();
+             działanie = sr.ReadLine();
+           //  testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
+             marka = sr.ReadLine();
+         }
+         //Definicja metody wirtualnej WritePhotoToFile
+         //public override void WritePhotoToFile(string fullFileName)
+         //{
+         //image.Save(fullFileName, ImageFormat.Bmp);
+         //}
+         //Definicja metody wirtualnej ReadPhotoFromFile
+         //public override void ReadPhotoFromFile(string fullFileName)
+         //{
+         //  image = (Bitmap)Image.FromFile(fullFileName);
+         /
+        /}
+
+        */
+        public override void WriteToFile(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine("--------------------");
+            streamWriter.WriteLine("Artykuły pielęgnacyjne");
+
+            base.WriteToFile(streamWriter);
+            streamWriter.WriteLine(nazwa);
+            streamWriter.WriteLine(pojemność);
+            streamWriter.WriteLine(wegańskie);
+            streamWriter.WriteLine(dlaKogo);
+            streamWriter.WriteLine(działanie);
+            streamWriter.WriteLine(marka);
+
+            streamWriter.WriteLine("");
         }
 
-        //Definicja metody wirtualnej wczytującej wartości pól obiektu klasy Student z pliku tekstowego
-        public override void ReadFromFile(StreamReader sr)
+        public override void ReadFromFile(List<string> stringList)
         {
-            numerProduktu = Convert.ToInt32(sr.ReadLine());
-            nazwa = sr.ReadLine();
-            pojemność = Convert.ToInt32(sr.ReadLine());
-            cena = GetInputValidator.ConvertToFloat(sr.ReadLine());
-            wegańskie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
-            dlaKogo = sr.ReadLine();
-            działanie = sr.ReadLine();
-            testowanyDermatologicznie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(sr.ReadLine());
-            marka = sr.ReadLine();
+            try
+            {
+                base.ReadFromFile(stringList);
+                nazwa = stringList[9];
+                pojemność = Convert.ToInt32(stringList[10]);
+                wegańskie = AkcesoriaKosmetyczne.SetTestowanyDermatologicznie(stringList[11]);
+                dlaKogo = stringList[12];
+                działanie = stringList[13];
+                marka = stringList[14];
+            }
+            catch (System.ArgumentOutOfRangeException e)
+            {
+                MessageBox.Show($"Błąd przy wczytywaniu pliku!\n\n Kod błędu {e}");
+            }
+
+
         }
-        //Definicja metody wirtualnej WritePhotoToFile
-        //public override void WritePhotoToFile(string fullFileName)
-        //{
-        //image.Save(fullFileName, ImageFormat.Bmp);
-        //}
-        //Definicja metody wirtualnej ReadPhotoFromFile
-        //public override void ReadPhotoFromFile(string fullFileName)
-        //{
-        //  image = (Bitmap)Image.FromFile(fullFileName);
-        //}
-
-
     }
 }
-
 
