@@ -45,6 +45,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(12, 534);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 71);
+            this.button1.Size = new System.Drawing.Size(142, 71);
             this.button1.TabIndex = 1;
             this.button1.Text = "Poprzedni";
             this.button1.UseVisualStyleBackColor = false;
@@ -81,9 +83,9 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(253, 534);
+            this.button2.Location = new System.Drawing.Point(346, 534);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 71);
+            this.button2.Size = new System.Drawing.Size(135, 71);
             this.button2.TabIndex = 2;
             this.button2.Text = "Następny";
             this.button2.UseVisualStyleBackColor = false;
@@ -95,9 +97,9 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(114, 37);
+            this.button3.Location = new System.Drawing.Point(160, 532);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 76);
+            this.button3.Size = new System.Drawing.Size(165, 71);
             this.button3.TabIndex = 5;
             this.button3.Text = "Przeglądaj produkty na liście";
             this.button3.UseVisualStyleBackColor = false;
@@ -182,9 +184,9 @@
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button6.Location = new System.Drawing.Point(770, 355);
+            this.button6.Location = new System.Drawing.Point(852, 340);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(96, 46);
+            this.button6.Size = new System.Drawing.Size(100, 32);
             this.button6.TabIndex = 51;
             this.button6.Text = "OBLICZ";
             this.button6.UseVisualStyleBackColor = false;
@@ -222,14 +224,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(780, 283);
+            this.textBox1.Location = new System.Drawing.Point(852, 284);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 52;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(780, 311);
+            this.textBox2.Location = new System.Drawing.Point(852, 312);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 53;
@@ -240,13 +242,37 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(502, 392);
+            this.button7.Location = new System.Drawing.Point(502, 403);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(96, 46);
             this.button7.TabIndex = 57;
             this.button7.Text = "WYPISZ";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(522, 277);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(307, 29);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Cena pierwszego produktu:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(550, 305);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(279, 29);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "Cena drugiego produktu:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Przeglad
             // 
@@ -255,6 +281,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(979, 634);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -300,5 +328,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

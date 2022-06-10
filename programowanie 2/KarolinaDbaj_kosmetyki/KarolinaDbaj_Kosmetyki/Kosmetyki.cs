@@ -87,21 +87,6 @@ namespace KarolinaDbaj_Kosmetyki
             this.image = image;
 
         }
-        // public Kosmetyk(int numer, string nazwaMarki, string rodzajKosmetyku, float cena, int numerProduktu,
-        // string odcień, bool testowanyDermatologicznie, string wykończenie, int trwałośćWMiesiącach)
-
-        // {
-        //this.numer = liczbaKosmetykow;
-        //this.nazwaMarki = nazwaMarki;
-        // this.rodzajKosmetyku = rodzajKosmetyku;
-
-        // this.cena = cena;
-        //this.kodProduktu = kodProduktu;
-
-        // this.testowanyDermatologicznie = testowanyDermatologicznie;
-        // this.wykończenie = wykończenie;
-        // this.trwałośćWMiesiącach = trwałośćWMiesiącach;
-        // }
         public Kosmetyk(string rodzajKosmetyku, string nazwaMarki, float cena, int numerProduktu, bool testowanyDermatologicznie, int trwałośćWMiesiącach, string wykończenie, DateTime dataZakupu)
         {
             //numer += 1;
@@ -137,19 +122,6 @@ namespace KarolinaDbaj_Kosmetyki
         }
         public virtual void Wypisz(ListBox lb)//metoda wirtualna w klasie bazowej
         {
-            //numer += 0;
-            //lb.Items.Add("Numer kosmetyku(kolejno):\t" + number);
-            //lb.Items.Add("Nazwa marki:" + nazwaMarki);
-            //lb.Items.Add("rodzaj kosmetyku:" + rodzajKosmetyku);
-
-            //lb.Items.Add("Cena produktu: " + cena);
-            //lb.Items.Add("Kod produktu: " + kodProduktu);
-
-            // lb.Items.Add("Testowany dermatologicznie: " + (testowanyDermatologicznie ? "tak" : "nie"));
-            //lb.Items.Add("Wykończenie: " + wykończenie);
-            //lb.Items.Add("Trwałość (w miesiącach): " + trwałośćWMiesiącach);
-            // lb.Items.Add("Trwałość w latach: " + TrwałośćWLatach());
-            //  lb.Items.Add("Data zakupu: " + dataZakupu);
 
         }
 
@@ -173,20 +145,10 @@ namespace KarolinaDbaj_Kosmetyki
             pb.Image = image;
 
         }
-        //public virtual void WritePhotoToFile(string fullFileName)
-        //{
-        //}
-        //Definicja metody wirtualnej ReadPhotoFromFile
-        //Ciało funkcji jest zdefiniowane w odpowiednich funkcjach klas pochodnych
         public virtual void ReadPhotoFromFile(string fullFileName)
         {
         }
-
-
-        ~Kosmetyk()
-        {
-            MessageBox.Show("Likwidacja obiektu klasy Kosmetyk.");
-        }
+        
         public float ObliczZniżkę(TextBox tb, Label lb)
         {
             //var textBoxZniżka = new TextBox();
