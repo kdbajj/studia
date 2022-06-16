@@ -102,5 +102,31 @@ on e1.ReportsTo=e2.EmployeeID;
 
 select *
 from orders as o INNER JOIN customers as c 
-ON c.Country="France";
+ON o.CustomerID=c.CustomerID
+WHERE c.Country="France";
 
+-- ZADANIE 12 
+select c.CustomerID, COUNT(o.OrderID) as liczbaZamowien
+FROM orders AS o INNER JOIN customers as c ON o.CustomerID=c.CustomerID
+WHERE c.Country="France" 
+group by c.CustomerID
+HAVING liczbaZamowien>1;
+
+-- ZADANIE 13
+	select c.CustomerID, COUNT(o.OrderID) as LiczbaZamowien , o.OrderID
+    FROM orders as o right outer join customers as c on c.CustomerID=o.CustomerID
+    where c.Country="France"
+	group by c.CustomerID;
+-- ZADANIE 14
+
+Select *
+FROM employees 
+where City=(SELECT City
+from employees WHERE FirstName="Robert" AND LastName="King");
+
+
+-- ZADANIE 15
+SELECT *
+from orders
+Where CustomerID IN (SELECT OrderID FROM Customers WHERE Country="France" GROUP BY CustomerID)
+GROUP BY OrderID;

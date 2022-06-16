@@ -129,13 +129,26 @@ namespace KarolinaDbaj_Kosmetyki
                 MessageBox.Show("Brak obiektu do usunięcia!");
                 return;
             }
+            else if (currentIndex == 1)
+            {
+                Form1.kosmetyki.RemoveAt(currentIndex);
+            }
 
-            Form1.kosmetyki.RemoveAt(index);
-            UpdateButtons();
-            listBox1.Items.Clear();
-            pictureBox2.Image = null;
-            MessageBox.Show("Pomyślnie usunięto obiekt!");
+            try {
+                Form1.kosmetyki.RemoveAt(index-1);
+                UpdateButtons();
+                listBox1.Items.Clear();
+                pictureBox2.Image = null;
+                MessageBox.Show("Pomyślnie usunięto obiekt!");
+            }
+            catch
+            {
+                System.ArgumentOutOfRangeException argumentOutOfRangeException;
+                {    
 
+                    Form1.kosmetyki.RemoveAt(currentIndex);
+                }
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -444,7 +444,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox5;
     }
 }
