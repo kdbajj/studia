@@ -1,49 +1,38 @@
 function y=rzad_mac_p_2(m)
-  [q p]=size(m);
-  okay = true;
-  c=0;
-  
-  if(p!=2 || q!=2)
-    disp("Macierz nie jest px2")
-  else
-   for i=1:q
-     for j=1:p
-       if(m(i,j)==0)
-          c++;
-       endif
-     endfor
-   endfor
-   
-   if(c==4)
-    y=0;
-   endif
-   
-   if(m(2,1)==0 && m(2,2)==0 && c!=4 || m(1,1)==0 && m(1,2)==0 && c!=4)
-    y=1;
-    c=4;
-   endif
-   
-   s=m(1,2);
-   d=m(1,1);
-   x=s/d;
+[p b]=size(m);
+tylko_zera=true;
+for i=1:p
+  for j=1:2;
+    if m(i,j)!=0
+      
+      tylko_zera=false;
+    endif
+  endfor
+endfor
 
-   if(c!=4)
-     for i=2:p
-        s=m(i,2);
-        d=m(i,1);
-        z=s/d;
-        if(z!=x)
-          okay=false;
-        endif 
-    endfor
-   endif
-   
-   if(okay==true && c!=4)
-    y=1;
-   endif
-   if(okay==false && c!=4)
-    y=2;
-   endif
-   
-  endif
+if(tylko_zera==true)
+y=0;
+else 
+
+krzyzek = 1;
+
+for i=1:p
+  for j=1+1:p
+    if (m(i,1)*m(j,2) != m(j,1)*m(i,2))
+      krzyzek = 0;
+    endif
+  endfor
+endfor
+
+
+if krzyzek == 1
+  y=1;
+else
+  y=2;
+endif
+
+
+endif
+ 
+ 
 endfunction
