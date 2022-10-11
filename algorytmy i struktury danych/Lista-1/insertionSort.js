@@ -1,6 +1,5 @@
-//let array = [];
 let t = 0;
-function inserionSort(array) {
+function sortowanie(array) {
   for (let i = 1; i < array.length; i++) {
     let current = array[i];
     let j = i - 1;
@@ -9,13 +8,13 @@ function inserionSort(array) {
       j--;
       t++;
     }
+    array[j + 1] = current;
   }
   console.log(
-    `Liczba wykonanych porównań: ${t}, 
-  a wartość a wynosi: ${t / Math.pow(array.length, 2)}`
+    `Liczba wykonanych porównań: ${t},
+  natomiast wartość a wynosi: ${t / Math.pow(array.length, 2)} :))`
   );
-
   return array;
 }
 
-console.log(inserionSort([4, 5, 62, 7, 6, 5]));
+console.log(sortowanie([5, 4, 3, 2, 1]));
