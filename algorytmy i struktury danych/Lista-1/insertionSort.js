@@ -17,4 +17,4 @@ function sortowanie(array) {
   return array;
 }
 
-console.log(sortowanie([5, 4, 3, 2, 1]));
+console.log(sortowanie([18, 15, 17, 19, 14, 16]));
