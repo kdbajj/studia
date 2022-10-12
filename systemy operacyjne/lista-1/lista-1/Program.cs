@@ -20,6 +20,9 @@ join
 
 Zadanie 4
 Nowy wątek.
+
+Zadanie 5
+Uśpić wątek na 1000 milisekund
 */
 
 
@@ -29,7 +32,6 @@ namespace lista_1
     {
         static void Main(string[] args)
         {
-
             Thread thr = new Thread(new ThreadStart(PrintSquares));
             thr.Start();
             thr.Join();
@@ -37,6 +39,9 @@ namespace lista_1
             Thread thr2 = new Thread(new ThreadStart(PrintQubes));
             thr2.Start();
             thr2.Join();
+
+            Thread.Sleep(200);
+            Thread.Sleep(2000);
 
 
             PrintHelloMyFriend();
