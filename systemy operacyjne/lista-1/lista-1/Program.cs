@@ -16,6 +16,10 @@ Zadanie 2
 dorzucamy nowy wątek w wątku głównym (wywołana w main ale nowy wątek)
 
 Zadanie 3
+join
+
+Zadanie 4
+Nowy wątek.
 */
 
 
@@ -30,7 +34,10 @@ namespace lista_1
             thr.Start();
             thr.Join();
 
-            PrintQubes();
+            Thread thr2 = new Thread(new ThreadStart(PrintQubes));
+            thr2.Start();
+            thr2.Join();
+
 
             PrintHelloMyFriend();
 
@@ -59,11 +66,8 @@ namespace lista_1
             for (int i = 0; i <= 100; i++)
             {
                 Console.WriteLine("Sześcian " + i + " to:  " + i * i * i);
-
-
             }
         }
-
     }
 }
 
