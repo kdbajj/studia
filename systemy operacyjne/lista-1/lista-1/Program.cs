@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-
 /*Zadanie 1
  * W funkcji main należy wywołać funkcję print squares, wypisuje kwadraty kolejnych liczb naturalnych od 1 do 100.
  * Poniżej tej funkcji należy wypisać 100 razy "Hello my friend". Program ma zakończyć się po naciśnięciu esc.
@@ -23,6 +22,11 @@ Nowy wątek.
 
 Zadanie 5
 Uśpić wątek na 1000 milisekund
+Z
+
+Zadanie 6
+
+Uruchomić wątek jeden po drugim
 */
 
 
@@ -33,12 +37,14 @@ namespace lista_1
         static void Main(string[] args)
         {
             Thread thr = new Thread(new ThreadStart(PrintSquares));
-            thr.Start();
+            
             thr.Join();
+            thr.Start();
 
             Thread thr2 = new Thread(new ThreadStart(PrintQubes));
-            thr2.Start();
             thr2.Join();
+            thr2.Start();
+
 
             Thread.Sleep(200);
             Thread.Sleep(2000);
