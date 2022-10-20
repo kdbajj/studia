@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 
 /*Zadanie 1
@@ -21,8 +15,7 @@ Zadanie 4
 Nowy wątek.
 
 Zadanie 5
-Uśpić wątek na 1000 milisekund
-Z
+Uśpić wątek na 1000 milisekund.
 
 Zadanie 6
 
