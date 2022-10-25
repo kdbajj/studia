@@ -1,0 +1,8 @@
+for (gap = floor(n / 2); gap > 0; gap = floor(gap / 2)) 
+    for (let i = gap; i < n; i=i+1) 
+        temp = array[i]
+
+        for (j = i; j >= gap && array[j - gap] > temp; j = j - gap) 
+            liczbaPorownan++
+            array[j] = array[j - gap]
+        array[j] = temp
