@@ -8,7 +8,7 @@ function shellSort(array) {
       let temp = array[i];
 
       let j;
-      for (j = i; j >= gap && array[j - gap] < temp; j -= gap) {
+      for (j = i; j >= gap && array[j - gap] > temp; j -= gap) {
         liczbaPorownan++;
         array[j] = array[j - gap];
       }
