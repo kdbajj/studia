@@ -97,3 +97,4 @@ plot(density(dl_partii))
 
 #wniosek: rozkład prawdopodobieństwa zmiennej losowej "liczba posunięć" 
 #przypomina rozkład weibull'a
+
