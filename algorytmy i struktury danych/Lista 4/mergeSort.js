@@ -23,6 +23,7 @@ function merge(left, right) {
   while (newArray.length < length) {
     numberOfComparisons++;
     if (right.length === rightIndex || left[leftIndex] < right[rightIndex]) {
+      //
       newArray.push(left[leftIndex]);
       leftIndex++;
     } else {
