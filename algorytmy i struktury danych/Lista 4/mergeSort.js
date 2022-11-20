@@ -22,7 +22,8 @@ function merge(left, right) {
   let rightIndex = 0;
   while (newArray.length < length) {
     numberOfComparisons++;
-    if (right.length === rightIndex || left[leftIndex] < right[rightIndex]) {
+    if (right.length === rightIndex || left[leftIndex] < right[rightIndex]) {//
+        
       //
       newArray.push(left[leftIndex]);
       leftIndex++;
