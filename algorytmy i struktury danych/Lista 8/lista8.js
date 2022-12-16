@@ -1,66 +1,40 @@
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-class BinarySearchTree {
-  constructor() {
-    this.root = null;
-  }
+function deleteNode(root, key) {
+  if (!root) return null;
 
-  // this function calls removeNode
-
-  remove(value) {
-    this.root = this.removeNode(this.root, value);
-  }
-  // a recursive function to insert a new value in binary search tree
-
-  removeNode(current, value) {
-    // base case, if the tree is empty
-
-    if (current === null) return current;
-
-    // when value is the same as current's value, this is the node to be deleted
-
-    if (value === current.value) {
-      // for case 1 and 2, node without child or with one child
-
-      if (current.left === null && current.right === null) {
-        return null;
-      } else if (current.left === null) {
-        return current.right;
-      } else if (current.right === null) {
-        return current.left;
-      } else {
-        /// node with two children, get the inorder successor,
-        //smallest in the right subtree
-
-        let tempNode = this.kthSmallestNode(current.right);
-        current.value = tempNode.value;
-
-        /// delete the inorder successor
-
-        current.right = this.removeNode(current.right, tempNode.value);
-        return current;
-      }
-
-      // recur down the tree
-    } else if (value < current.value) {
-      current.left = this.removeNode(current.left, value);
-      return current;
+  if (key < root.val) {
+    //key-wartość którą chcemy usunąć
+    root.left = deleteNode(root.left, key);
+  } else if (key > root.val) {
+    root.right = deleteNode(root.right, key);
+  } else {
+    if (!root.left && !root.right) {
+      root = null;
+    } else if (!root.right) {
+      root = root.left;
+    } else if (!root.left) {
+      root = root.right;
     } else {
-      current.right = this.removeNode(current.right, value);
-      return current;
+      let successor = findSuccessor(root);
+      root.val = successor.val;
+      root.right = deleteNode(root.right, successor.val);
     }
   }
 
-  /// helper function to find the smallest node
+  return root;
+}
 
-  kthSmallestNode(node) {
-    while (!node.left === null) node = node.left;
-
+function findSuccessor(node) {
+  //funkcja znajdująca potomka - jeżeli rodzic ma 2 dzieci to potomek jest w prawo najniżej
+  if (node.right) {
+    node = node.right;
+    while (node.left) {
+      node = node.left;
+    }
     return node;
+  } else {
+    while (node.parent && node === node.parent.right) {
+      node = node.parent;
+    }
+    return node.parent;
   }
 }
