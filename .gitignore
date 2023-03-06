@@ -83,3 +83,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 repos/studia/Inżynieria gier komputerowych
 repos/studia/Inżynieria gier komputerowych/Assets/
+
+# intelijet
+*.idea
+*.DS_Store
