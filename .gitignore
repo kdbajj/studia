@@ -87,3 +87,4 @@ repos/studia/Inżynieria gier komputerowych/Assets/
 # intelijet
 *.idea
 *.DS_Store
+*.class
