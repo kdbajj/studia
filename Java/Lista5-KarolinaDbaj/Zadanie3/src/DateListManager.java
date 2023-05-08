@@ -38,7 +38,7 @@ public class DateListManager {
 
     public void addDate(String date) {
         dates.add(date);
-        if (dates.size() > MAX_SIZE) {
+        if (dates.size() > MAX_SIZE) { // jeśli lista przekroczyła maksymalną liczbę elementów
             dates.remove(0);
         }
         sortDates();
