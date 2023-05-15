@@ -14,14 +14,14 @@ public class SimpleCalculator {
         container.setLayout(new BorderLayout());
 
         JTextField textField = new JTextField(10);
-        textField.setHorizontalAlignment(SwingConstants.RIGHT);
+        textField.setHorizontalAlignment(SwingConstants.RIGHT);//ustawienie wyrównania prawo
         container.add(textField, BorderLayout.NORTH);
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4, 4));
 
         ActionListener actionListener = new ActionListener() {
-            String current = "";
+            String current = "";//bieżące wyrażenie matematyczne
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -30,6 +30,7 @@ public class SimpleCalculator {
                     case "=":
                         textField.setText(evaluate(current));
                         current = "";
+
                         break;
                     case "C":
                         current = "";
@@ -121,6 +122,7 @@ public class SimpleCalculator {
                 return a * b;
             case '/':
                 return a / b;
+
             default:
                 throw new IllegalArgumentException("Nieprawidłowy operator: " + operator);
         }
