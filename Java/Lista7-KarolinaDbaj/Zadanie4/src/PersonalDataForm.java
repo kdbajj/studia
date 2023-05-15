@@ -21,6 +21,8 @@ public class PersonalDataForm {
         JTextField lastNameTextField = createHintTextField("Nazwisko");
         container.add(lastNameTextField);
 
+        
+
         JTextField peselTextField = createHintTextField("Numer PESEL");
         peselTextField.setToolTipText("Podaj 11-cyfrowy numer PESEL");
         container.add(peselTextField);
