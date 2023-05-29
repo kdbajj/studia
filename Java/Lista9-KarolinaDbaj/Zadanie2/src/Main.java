@@ -50,7 +50,7 @@ class Student implements Comparable<Student> {
 
         int sredniaComparison = Double.compare(this.srednia, other.srednia);
         if (sredniaComparison != 0) {
-            return -sredniaComparison;
+            return -sredniaComparison;//sortowanie malejąco
         }
 
         return this.nazwisko.compareTo(other.nazwisko);
