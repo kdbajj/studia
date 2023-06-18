@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.mazebank.Controllers.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazebank.Controllers.LoginController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="400.0" prefWidth="200.0" styleClass="login_logo_container" stylesheets="@../Styles/login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Maze Bank" />
+         </children></VBox>
+      <VBox layoutX="370.0" layoutY="100.0" prefHeight="350.0" prefWidth="350.0" styleClass="login_form_container" stylesheets="@../Styles/login.css" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Choose Your Account Type:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <ChoiceBox fx:id="acc_selector" prefWidth="150.0" styleClass="account_selector" stylesheets="@../Styles/login.css" />
+            <Label fx:id="payee_address_lbl" text="Payee Address">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="payee_address_fld" styleClass="input_field" />
+            <Label fx:id="password_lbl" text="Password:" />
+            <TextField fx:id="password_fld" styleClass="input_field" />
+            <Button mnemonicParsing="false" stylesheets="@../Styles/login.css" text="Button" />
+            <Label styleClass="error_lbl" text="error" />
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
