@@ -11,7 +11,7 @@
 
 .login_logo_container Text {
     -fx-font-size: 2em;
-    -fx-fill: #FFFFF;
+    -fx-fill: #ffffff;
  }
 
 .login_logo_container FontAwesomeIconView{
@@ -54,7 +54,7 @@
 }
 
 .input_field{
-    -fx-background-color: #FFFFF;
+    -fx-background-color: #ffffff;
     -fx-pref-height: 35;
     -fx-font-size: 1.2em;
 }

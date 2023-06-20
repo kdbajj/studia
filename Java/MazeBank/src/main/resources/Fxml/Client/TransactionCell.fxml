@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="60.0" prefWidth="550.0" styleClass="cell_container"
+            stylesheets="@../../Styles/TransactionCell.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <VBox prefHeight="50.0" prefWidth="50.0" styleClass="trans_icon_container" AnchorPane.bottomAnchor="5.0"
+         AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0"/>
+   <Label fx:id="trans_date_lbl" layoutX="100.0" layoutY="22.0" styleClass="trans_date_lbl" text="18-06-2023"
+          AnchorPane.leftAnchor="100.0"/>
+   <Label fx:id="sender_lbl" layoutX="200.0" layoutY="22.0" styleClass="trans_pAddress_lbl" text="Patrick"
+          AnchorPane.leftAnchor="200.0"/>
+   <Line endY="20.0" layoutX="337.0" layoutY="30.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="22.0"/>
+   <Label fx:id="amount_lbl" layoutX="487.0" layoutY="17.0" styleClass="trans_amount_lbl" text="\$2000"
+          AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="17.0"/>
+   <Label fx:id="receiver_lbl" layoutX="358.0" layoutY="22.0" styleClass="trans_pAddress_lbl" text="Benjamin"/>
+</AnchorPane>
